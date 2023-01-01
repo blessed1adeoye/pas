@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+{% block content %}
+
+<div class="row main-content" style="background:lightgreen;"><!-- Main Content -->
+  <div class="large-12 columns">
+   <div class="row band3"><!-- Row -->
+  <!-- Row -->
+     <div class="large-8 columns"> <br/>
+        <table class="table">
+          <thead>
+            <tr>
+                <th><h1>VIDEOS</h1></th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for video in videos %}
+
+                <tr>
+                    <td>
+                       <button>
+                           <a href="{{ video.videofile.url }}" target="blank">
+                            <h6>{{ video.name }}</h6>
+                           </a>
+                       </button>
+
+                    </td>
+                </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+     </div>
+
+    <br/>
+    <div class="large-4 columns">
+      <div class="clearfix"></div>
+        <!-- End Panel -->
+
+            <h3 align="center">God Answers Prayers!!!</h3>
+         <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px;">PASTOR SAMUEL AJAYI's MINISTRY: The home of
+          <highlight style="color: gold;"> <b>Signs &amp; Wonders.</b></highlight>
+          <br/><br/>
+                        “The effectual fervent prayer of a righteous
+                man availeth much” (James 5:16).  <br/><br/>
+                Prayer is that vital link that connects us with our heavenly Father.<br/>
+                Biblical prayer conotes our crying to God because we have an assurance that He hears us.<br/>
+                Prayer is an incredible privilege: it is able to move the hand of God in seemingly hopeless situations.<br/><br/>
+
+                <b>In this Commission, We believe that:</b><br/>
+                          God Answers prayers<br/>
+                         God will honor every prayer offered in faith<br/>
+
+                  <b>Your long awaited turn-around and change of story has come!</b>
+         </p>
+        <div class="contact-details">
+           <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px;"><span><i class="icon-home"></i></span>Address: KM 9 QUEEN ELIZABETH ROAD TOTAL GARDEN IBADAN </p>
+           <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px;"><span><i class="icon-phone"></i></span>Phone: (416) 749-5191</p>
+           <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px;"><span><i class="icon-envelope"></i></span>E-mail: prayers@lfctotalgarden.org</p>
+        </div>
+        <br />
+        <ul class="inline-list" style="padding-left:30px;">
+          <li><a class="smallipopBlue" href="#" title="Facebook"><i class="icon-facebook-sign icon-2x"></i></a></li>
+          <li><a class="smallipopBlue" href="#" title="Twitter"><i class="icon-twitter-sign icon-2x"></i></a></li>
+          <li><a class="smallipopBlue" href="#" title="Google+"><i class="icon-google-plus-sign icon-2x"></i></a></li>
+          <li><a class="smallipopBlue" href="#" title="Linkedin"><i class="icon-linkedin-sign icon-2x"></i></a></li>
+          <li><a class="smallipopBlue" href="#" title="Pinterest"><i class="icon-pinterest-sign icon-2x"></i></a></li>
+        </ul>
+
+
+
+    </div>
+
+</div>
+
+
+ <br>
+
+<br clear="all">
+<br>
+  <!-- End Special Row -->
+<meta name="viewport" content="width=device-width" />
+<title>| VIDEOS </title>
+    {% endblock content %}
+
+
+
+
+

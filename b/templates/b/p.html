@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<title>ADMIN | Winners Chapel International - Total Garden | winnerschapeltg.org</title>
+
+{% include 'b/adm.html' %}
+{% for x in p_list %}
+
+{{ x.msg_id }} {{ x.full_name }} {{ x.residential }} {{ x.email }} {{ x.phone }} {{ x.church }} {{ x.city }} {{ x.call }} {{ x.pray_for }}{{ x.prayer }}{{ x.time }}
+
+
+
+{% endfor %}
+
+
+
+
+
+
+
+{% endblock content %}

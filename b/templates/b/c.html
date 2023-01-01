@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'font/css/all.css' %}">
+{% if name %}
+            <center style="background-color: red;">
+              <h2 style="color: #fff"><b>Thanks</b></h2><h1 style="color: cadetblue"><b>{{ name }}</b></h1>
+                <h4 style="color: #fff"><b>We received your mail and we will get back to your email: {{ email }}</b> </h4><h3 style="color: #fff"> <b>shortly...</b></h3>
+            </center>
+
+{% else %}
+
+<div class="large-12 columns" style="background-color:#fff;">
+    <div class="row band3"><!-- Row -->
+        <div class="large-7 columns">
+
+
+
+             <h3>Get in Touch With Us</h3>
+         <form method="POST" >
+             {% csrf_token %}
+            <legend>Please fill this Form to Contact us!</legend>
+            <input type="hidden" name="check" value="1">
+
+          <div id="status"></div>
+          <div class="contact_form">
+            <div class="row">
+              <div class="small-6 columns">
+                  <label style="color:gold;">NAME</label>
+                  <input type="text" size="30" class="frm_txt_fld"   placeholder="Your Full Name" name="name"/>
+              </div>
+              <div class="small-6 columns">
+                  <label style="color:gold;">EMAIL</label>
+                  <input type="email" size="30" class="frm_txt_fld"  placeholder="Your Email" name="email"/>
+              </div>
+              <div class="small-12 columns" style="padding-top:5%;">
+                  <textarea cols="7" rows="7"  placeholder="What can we do for You" name="message"></textarea>
+                  <br />
+              </div>
+              <center>
+                <div class="small-6 columns" style="padding:10px;">
+
+                    <input type="submit" class="button success radius medium" value="Click to Send your message"  />
+                </div>
+              </center>
+                  </div>
+                </div>
+          </fieldset>
+         </form>
+        </div>
+        <div class="large-5 columns">
+            <h4 align="center">This is your Season of Change!</h4>
+            <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px;">Winners Chapel Total Garden, Ibadan The home of
+              <highlight> Signs &amp; Wonders.</highlight>
+              <br/>
+              <br/>
+              We are thankful to God for the opportunity to share the Word Of Faith with you. This Word has power to change lives and at Winners Chapel Total Garden, Ibadan,   we are:<br/>
+              We are raising a people to be envied,<br/>
+              We are raising a people of attraction,<br/>
+              We are raising a people of spiritual depth and insight,<br/>
+              We are raising a people of honour;<br/>
+              and a generation of men and women schooled in exploits.<br/>
+              <br/>
+              <b>Your long awaited turn-around and change of story has come!</b></p>
+            <div class="contact-details"><p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px;"><span><i class="icon-home"></i></span>Address:  KM9, Queen Elizabeth Way Total Garden <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ibadan, Nigeria </p><p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px;"><span><i class="icon-phone"></i></span>Phone: (234) 548-7063</p>
+                <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px;"><span><i class="icon-envelope"></i></span>E-mail: info@lfctotalgarden.org</p>
+            </div>
+            <br />
+        </div>
+    </div>
+</div>
+
+ {% endif %}
+
+
+{% endblock content %}

@@ -1,0 +1,184 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+{% block content %}
+
+
+        <div class="row main-content">
+<!-- Main Content -->
+<div class="large-12 columns">
+<div class="row">
+<!-- Row -->
+<div class="large-8 columns"> <br/>
+
+  <article class="post">
+      {% for x in pd %}
+    <div class="post_img">
+      <div class="orbit-container">
+
+        <!-- Orbit Container -->
+        <img src="{{ x.img.url }}"> </div>
+      <!-- End Orbit Container -->
+    </div>
+    <h4 align="center" style="font-weight:bolder;">PROPHETIC FOCUS FOR {{ x.month }}, {{ x.year }}</h4>
+    <h3 align="center" style="padding-top:0px; font-weight:bolder; c;"olor:#033868> <font style="color:#900;"> <b>
+{{ x.theme }}</b> </font><font style="font-size:15px;">  – {{ x.reference }}. </font></b></h3>
+    <br/>
+      <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px; padding: 0 20px;"><b>{{ x.body|safe }} </b></p>
+
+
+
+
+<h4>Therefore, the prophetic focus for the month of{{ x.month }} {{ x.year }}: </h4>
+
+
+ <br/>
+
+
+
+     <h4 align="center" style="padding-top:0px; font-weight:bolder; color:#033868;"> <font style="color:#900;"><b>{{ x.theme }}</b> </font><font style="font-size:13px;"> –  {{ x.reference }} </font></h4>
+
+
+
+    <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px; padding: 0 20px;"> Recommended <a style="color:#F00;" href="{% url 'b:Bkm' %}">Recommended  books for the month</a> authored by Bishop David Oyedepo  include:<br/>
+
+
+ <span style="font-family: wingdings; font-size: 100%;padding-left:10px;"> &#x2611;</span> {{ x.book|safe }}<br/>
+      <br/>
+{% endfor %}
+      <br/>
+      Remain ever blessed. <br/>
+      <b style="font-family: Monotype Corsiva; font-size: 22.0pt;">Jesus is Lord!!!</b> </p>
+    <br/>
+  </article>
+</div>
+<div class="large-4 columns">
+  <div class="clearfix"></div>
+
+  <!-- End Panel -->
+  <br/>
+  <br/>
+  <style>
+.jcarousel-skin-tango .jcarousel-container-vertical {
+    height: 409px;
+    padding: 5px 10px 15px 30px;
+	 font-family: "century gothic";
+	 font-size:13px;
+	/* color:#000;
+	 background: #fff;*/
+	 border: solid 1px #cccccc;
+    color: #4e4e4e;
+    background: #F2F2F2;
+    overflow: hidden;
+}
+
+.jcarousel-skin-tango .jcarousel-clip {
+    overflow: hidden;
+}
+
+.jcarousel-skin-tango .jcarousel-clip-vertical {
+    height: 395px;
+}
+
+.jcarousel-skin-tango .jcarousel-item {
+    height: 147x;
+}
+
+.jcarousel-skin-tango .jcarousel-item-placeholder {
+    background: #fff;
+    color: #000;
+}
+
+/**
+ *  Vertical Buttons
+ */
+.jcarousel-skin-tango .jcarousel-next-vertical {
+    position: absolute;
+    bottom: 5px;
+	 bottom: 5px;
+    left: 0px;
+    width: 340px;
+    height: 14px;
+    cursor: pointer;
+    background: transparent url(../images/down.gif) no-repeat 0 0;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-vertical {
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    width: 340px;
+    height: 14px;
+    cursor: pointer;
+    background: transparent url(../images/up.gif) no-repeat 0 0;
+}
+
+.jcarousel-skin-tango a
+{
+    font-weight:bold;
+	text-decoration:none;
+}
+
+.jcarousel-skin-tango .ql-img
+{
+    padding-right: 10px;
+    float: left;
+    width: 90px;
+    height: 68px;
+}
+
+.jcarousel-skin-tango li
+{
+	padding:15px 0 6px 0;
+    border-bottom: 1px solid #517da6;
+    /*min-height:100px;*/
+}
+
+.jcarousel-skin-tango li.last
+{
+	border-bottom:none;
+	padding:10px 0 0 0;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="../js/jquery-ui.html">
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery.jcarousel.min.js"></script>
+
+
+  <script type="text/javascript">
+
+      function mycarousel_initCallback(carousel)
+      {
+      // Disable autoscrolling if the user clicks the prev or next button.
+      carousel.buttonNext.bind('click', function() {
+      carousel.startAuto(0);
+      });
+
+      carousel.buttonPrev.bind('click', function() {
+      carousel.startAuto(0);
+      });
+
+      // Pause autoscrolling if the user moves with the cursor over the clip.
+      carousel.clip.hover(function() {
+      carousel.stopAuto();
+      }, function() {
+      carousel.startAuto();
+      });
+      };
+
+    jQuery(document).ready(function() {
+        jQuery('#qlink-carousel').jcarousel({
+            auto: 4,
+            wrap: 'circular',
+            scroll: 1,
+            vertical: true,
+            animation: 1200,
+            initCallback: mycarousel_initCallback
+        });
+    });
+
+</script>
+
+
+{% endblock content %}

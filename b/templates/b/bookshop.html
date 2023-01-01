@@ -1,0 +1,103 @@
+
+
+
+
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+
+
+<title>DOMINION BOOKSHOP | Winners Chapel International - Total Garden | winnerschapeltg.org</title>
+
+<div class="row showcase"> <img src="{% static 'img/domi-books-large.png' %}" /> </div>
+<div class="row main-content">
+  <div class="large-12 columns">
+    <div class="row band3">
+      <div class="large-7 columns">
+                <h4 align="center" style="font-weight:bolder;">Books Authored by Bishop David O. Oyedepo, Bishop D. Abioye &amp; Pastor Faith A. Oyedepo</h4>
+        <form method="POST"   >
+          <fieldset>
+            <legend>Request Kingdom Resource</legend>
+            <input type="hidden" name="check" value="1">
+            <div id="status"></div>
+            <div class="contact_form">
+              {% csrf_token %}
+              <div class="row">
+                <div class="small-4 columns">
+                  <input type="text" size="30" class="frm_txt_fld" value=""  placeholder="Your Full Name" name="buyer_name" required id="id_buyer_name"/>
+                  <br />
+                </div>
+                <div class="small-4 columns">
+                  <input type="text" size="30" class="frm_txt_fld" value=""  placeholder="Your Mailing Address"  name="mailing_address" required id="id_mailing_address"/>
+
+                  <br />
+                </div>
+                <div class="small-4 columns">
+                  <input type="email" size="30" class="frm_txt_fld" value=""   placeholder="Your Email Address"  name="email" required id="id_email"/>
+                     <br />
+                </div>
+                <br/>
+                <div class="small-4 columns"><b style="color:#FFF;">Which Book Do you want?</b><br> <br/>
+                    {{ form.book}}
+                </div>
+                <br/>
+                <div class="small-4 columns"><b style="color:#FFF;">Number of Copies:</b> <br/>
+                  <br/>
+                  <input type="text" name="copies" size="5" class="frm_txt_fld" value="" required id="id_copies"/>
+
+                  <br />
+                </div>
+                <br/>
+                <div class="small-4 columns"><b style="color:#FFF;">Your Telephone Number:</b> <br/>
+                  <br/>
+                  <input type="text" size="15" class="frm_txt_fld" name="phone" placeholder="Phone No (999-999-9999)"  id="id_phone" required/>
+
+                  <br />
+                </div>
+                <br/>
+                <div class="small-12 columns" style="padding-top:5%;">
+                  <textarea cols="7" rows="7" id="id_message"  placeholder="Any Special Requirements?"name="message" required ></textarea>
+
+                  <br />
+                </div>
+
+                <div class="small-12 columns">
+                  <input type="submit" class="button success radius medium" value="Send message"  />
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+        <br/>
+        <p class="fontsforweb_fontid_9785" style="font-size:13px;">
+
+        <blockquote>
+          <h5 style="font-weight:bolder;"> NEW UPDATE:</h5>
+          <b style="font-size:16px; color:#E9EF0D; padding:5px;"> E-copies of some of Bishop Oyedepo's books are avalable online to purchase.</b> <br/>
+          &nbsp;<b style="font-size:16px; color:#fff; padding:5px;"> <a target="_blank" href ="http://domionlinestore.org/media-type/e-books-digital">Click Here</a> to make a secure purchase from the <a target="_blank" href ="http://domionlinestore.org/media-type/e-books-digital">DOMI Online Store</a></b>
+          </p>
+        </blockquote>
+      </div>
+      <div class="large-5 columns">
+        <h3 align="center"><b>The Publishing Mandate:</b></h3>
+        <p class="fontsforweb_fontid_9785" style="font-size:13px;">For more than two decades, Dr. David O. Oyedepo, has been part of the current charismatic renaissance overwhelming the world. His faith-based teaching has impacted millions of lives.</p>
+        <p class="fontsforweb_fontid_9785" style="font-size:13px;">Called with a specific mandate to liberate mankind from all oppression, Dr. Oyedepo is the Presiding  Bishop of Living Faith Church Worldwide a.k.a Winners Chapel (World Mission Agency) with a network of churches all over Nigeria and most nations of Africa, Europe and USA.</p>
+        <blockquote><i style="font-family:times new roman; font-size:16px; color:#E9EF0D;">"We are not publishing for money, we are publishing to make men stop mourning!
+          We owe the people education, and this is what we are doing with the word of faith in prints... it is a ministry of illumination by literature." -Dr. David O. Oyedepo</i></blockquote>
+        <!--  <h3>Aim of this Department:</h3>-->
+        <p class="fontsforweb_fontid_9785" style="font-size:13px;">He is the founding Pastor of the 50,000 auditorium Faith Tabernacle, Canaanland, Otta, Lagos Nigeria reputed to be the largest church auditorium in the world.</p>
+        <p class="fontsforweb_fontid_9785" style="font-size:13px;">As an educationist, his mission currently pioneers the establishment of educational institutions at all levels in Nigeria including the recently established Covenant University, and Landmark University where he serves as the chancellor.</p>
+        <p class="fontsforweb_fontid_9785" style="font-size:13px;">He has written over 60 titles of inspirational and motivational texts covering various aspects of life. He is married to Faith, and their marriage is blessed with children and grand-children </p>
+        <br/>
+        <p class="fontsforweb_fontid_9785" style="font-size:13px;"><b>The Publishing Mandate:</b> The word of God came to His servant Bishop David Oyedepo, saying:<br/>
+        <blockquote><i style="font-family:times new roman; font-size:16px; color:#E9EF0D;">"The Word I have put in your mouth, the same commit to writing and I will cause the unction on the spoken word to rest upon the written word, producing the same effect."</i></blockquote>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock content %}

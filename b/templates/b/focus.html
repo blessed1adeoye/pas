@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+{% block content %}
+<title>PROPHETIC FOCUS  | BISHOP DAVID OYEDEPO - PRESIDING BISHOP, Winners Chapel Worldwide</title>
+<div class="row main-content">
+<!-- Main Content -->
+<div class="large-12 columns">
+<div class="row">
+<!-- Row -->
+<div class="large-8 columns"> <br/>
+    {% for x in focus %}
+  <article class="post">
+    <div class="post_img">
+      <div class="orbit-container">
+        <!-- Orbit Container -->
+        <img src="/media/{{x.img}}"> </div>
+      <!-- End Orbit Container -->
+    </div>
+    <h4 align="center" style="font-weight:bolder;">PROPHETIC FOCUS FOR {{x.month | safe}}, {{x.year| safe}}</h4>
+    <h3 align="center" style="padding-top:0px; font-weight:bolder; "> <font style="color:#900;"> <b>{{x.theme| safe}}</b> </font><font style="font-size:15px; color:#033868;">  – {{x.reference| safe}}. </font></b></h3>
+    <br/>
+      <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px; padding: 0 20px;"><b>More than a Conqueror Greetings </b> to every Winner worldwide in the name of Jesus Christ. Amen.<br/></p>
+
+
+<p align="justify" class="fontsforweb_fontid_9785" style="color: green; font-size: 12px; padding: 0 20px;">{{x.body| safe}}</p>
+
+
+<h4>Therefore, the prophetic focus for the month of {{x.month | safe}}, {{x.year| safe}}: </h4>
+
+
+ <br/>
+
+
+
+     <h4 align="center" style="padding-top:0px; font-weight:bolder;"> <font style="color:#900;"><b>{{x.theme| safe}}</b> </font><font style="font-size:13px; color:#033868;"> –  {{x.reference| safe}} </font></h4>
+      {% endfor %}
+     {% for x in book %}
+      <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px; padding: 0 20px;"> Recommended <a style="color:#F00;" href="{% url 'b:Bkm' %}">Recommended  books for the month</a> authored by
+          {{x.name}}  include:<br/>
+
+
+
+    <span style="font-family: wingdings; font-size: 100%;padding-left:10px;"> &#x2611;</span> {{ x.book | safe}} <br/>
+
+{% endfor %}
+           <br/>
+
+ <br/>
+      Remain ever blessed. <br/>
+      <b style="color: blue;font-family: Monotype Corsiva; font-size: 22.0pt;">Jesus is Lord!!!</b> </p>
+    <br/>
+  </article>
+</div>
+<div class="large-4 columns">
+  <div class="clearfix"></div>
+
+  <!-- End Panel -->
+  <br/>
+  <br/>
+  {% block unit %} {% include 'b/unit.html' %}  {% endblock unit %}
+      <br/>
+      <br/>
+    </div>
+
+    <!-- End Row -->
+
+  </div>
+</div>
+
+
+{% endblock content %}

@@ -1,0 +1,581 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>WELCOME|PASTOR SAMUEL AJAYI|</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+<link  href="{% static 'img/78.png' %}" rel="icon">
+<link href="{% static 'img/78.png' %}"  rel="apple-touch-icon">
+<meta name="viewport" content="width-device-width, initial-scale=1, shrink-to-fit=no" >
+<meta name="keywords" content="JESUS IS LORD" />
+<link rel="stylesheet" href="{% static 'plugins/smallipop/css/contrib/animate.min.css' %}"  type="text/css"  />
+<link rel="stylesheet" href="{% static 'plugins/smallipop/css/jquery.smallipop.css' %}" type="text/css" />
+<link rel="stylesheet" href="{% static 'css/normalize.css' %}" />
+<link rel="stylesheet" href="{% static 'css/foundation.css' %}" />
+<link rel="stylesheet" href="{% static 'css/fgx-foundation.css' %}" />
+<link rel="stylesheet" href="{% static 'plugins/prettyphoto/prettyPhoto.css' %}" />
+<link rel="stylesheet"href="{% static 'layerslider/css/layerslider.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'plugins/fontawesome/css/font-awesome.min.css' %}">
+<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:400,300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Mrs+Saint+Delafield' rel='stylesheet' type='text/css'>
+<link href="http://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,400italic,400,600italic,600,700italic,700,800italic,800" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
+
+
+
+
+<script src="{% static 'js/vendor/jquery.js' %}"></script>
+<script src="{% static 'js/vendor/custom.modernizr.js' %}"></script>
+
+
+<script src="{% static 'layerslider/js/jquery.js' %}" type="text/javascript"></script>
+<script src="{% static 'layerslider/js/greensock.js' %}" type="text/javascript"></script>
+<script src="{% static 'layerslider/js/layerslider.transitions.js' %}" type="text/javascript"></script>
+<script src="{% static 'layerslider/js/layerslider.kreaturamedia.jquery.js' %}" type="text/javascript"></script>
+
+<!-- carousel plugin  scripts-->
+<script type="text/javascript" language="javascript" src="{% static 'plugins/carouFredSel/jquery.carouFredSel-6.2.0-packed.js' %}"></script>
+<script type="text/javascript" language="javascript" src="{% static 'plugins/carouFredSel/helper-plugins/jquery.touchSwipe.min.js' %}"></script>
+
+<!-- Twitter -->
+<script type="text/javascript" src="{% static 'plugins/twitter/jquery.jtweetsanywhere-1.3.1.min.js' %}"></script>
+
+<!-- Scripts Initialize -->
+<script src="{% static 'js/app-head-calls.js' %}"></script>
+
+
+<script>
+  // Carousel
+			$(window).load(function() {
+
+
+/*	CarouFredSel: a circular, responsive jQuery carousel.
+	Configuration created by the "Configuration Robot"
+	at caroufredsel.dev7studios.com
+*/
+$("#carousel-type1").carouFredSel({
+responsive: true,
+width: '100%',
+auto: true,
+circular : true,
+infinite : false,
+	items: {
+		visible: {
+min: 1,
+max: 4
+},
+	},
+	scroll: {
+		items: 1,
+		pauseOnHover: true
+	},
+	prev: {
+		button: "#prev2",
+		key: "left"
+	},
+	next: {
+		button: "#next2",
+		key: "right"
+	},
+	swipe: true
+});
+
+			});
+
+		$(document).ready(function(){
+		 document.oncontextmenu = function() {return false;};
+		$(document).mousedown(function(e){
+			if( e.button == 2 ) {
+			 		  alert('BLESSED ADEOYE OMOBUWA - COPYING DISABLED - All rights are reserved.');
+
+			  return false;
+			}
+			return true;
+		  });
+		});
+
+  </script>
+
+<!--Flickr Feed-->
+<script type="text/javascript" src="{% static 'js/extra/jflickrfeed.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/extra/setup.js' %}"></script>
+
+<!--Quicksand-->
+<script type="text/javascript" src="{% static 'plugins/prettyphoto/jquery.prettyPhoto.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.quicksand.js' %}"></script>
+<script type="text/javascript">
+
+	$(document).ready(function() {
+		//$("a[rel^='prettyPhoto']").click(function() {alert ('gag') });
+		$("a[rel^='prettyPhoto']").prettyPhoto({theme: 'pp_default'});
+
+		var $filterType = $('.portfolio-main li.active a').attr('class');
+		var $holder = $('ul.portfolio-content');
+		var $data = $holder.clone();
+		jQuery('.portfolio-main li a').click(function(e) {
+
+			$('.portfolio-main li').removeClass('active');
+			var $filterType = $(this).attr('class');
+			$(this).parent().addClass('active');
+
+			if ($filterType == 'all') {
+				var $filteredData = $data.find('li');
+			}
+			else {
+				var $filteredData = $data.find('li[data-type=' + $filterType + ']');
+			}
+			$holder.quicksand($filteredData,
+				{duration: 800,easing: 'easeInOutQuad'},
+				function() {
+					$("a[rel^='prettyPhoto']").prettyPhoto({theme: 'pp_default'});
+
+				}
+			);
+			return false;
+		});
+	});
+	</script>
+<style>
+@font-face {
+	font-family: 'gothic';
+
+}
+/* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_9785">Text with this font applied</p> */
+.fontsforweb_fontid_9785 {
+	font-family: 'gothic' !important;
+	text-align: justify;
+    font-size: 13px;
+    padding: 0 30px;
+}
+</style>
+<style type="text/css">
+body {
+  background-color: #eee;
+}
+
+body, h1, p {
+  font-family: "Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.container {
+  margin-left:  auto;
+  margin-right:  auto;
+  margin-top: 177px;
+  max-width: 1170px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.row:before, .row:after {
+  display: table;
+  content: " ";
+}
+
+.col-md-6 {
+  width: 50%;
+}
+
+.col-md-8 {
+    width: 75%;
+}
+
+.col-md-4 {
+    width: 25%;
+}
+
+.col-md-push-3 {
+  margin-left: 25%;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 300;
+  margin: 0 0 20px 0;
+}
+
+.lead {
+  font-size: 21px;
+  font-weight: 200;
+  margin-bottom: 20px;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+a {
+  color: #3282e6;
+  text-decoration: none;
+}
+</style>
+
+</head>
+<body>
+ <script src="{% static 'js/anie.js' %}"></script>
+
+
+
+<div class="row main-navigation">
+  <div class="large-12 columns">
+    <nav class="top-bar">
+      <ul class="title-area">
+        <li class="name"></li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+      </ul>
+      <section class="top-bar-section">
+
+        <!-- Nav Section -->
+        <ul class="right">
+            <li class="divider"></li>
+            <li><a href="{% url 'b:home' %}">Home</a></li>
+            <li class="divider"></li>
+            <li><a href="{% url 'b:pastor' %}">Pastor's Desk</a></li>
+            <li class="divider"></li>
+            <li><a href="{% url 'b:messages' %}"> Messages</a></li>
+            <li class="divider"></li>
+            <li><a href="{% url 'b:pray' %}"> Prayer Requests</a></li>
+            <li class="divider"></li>
+            <li><a href="{% url 'b:counsel' %}">Pastoral Counselling</a></li>
+            <li class="divider"></li>
+          <li><a href="{% url 'b:videos' %}">Download Center</a></li>
+
+          <li class="divider"></li>
+            <li><a href="{% url 'b:contact' %}">Contact</a></li>
+        </ul>
+      </section>
+    </nav>
+  </div>
+</div>
+
+<div align="center">
+
+
+<style>
+    .captionOrange, .captionBlack
+    {
+        color: #fff;
+        font-size: 20px;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 4px;
+    }
+    .captionOrange
+    {
+        background: #EB5100;
+        background-color: rgba(235, 81, 0, 0.6);
+    }
+    .captionBlack
+    {
+        font-size:16px;
+        background: #000;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    a.captionOrange, A.captionOrange:active, A.captionOrange:visited
+    {
+        color: #ffffff;
+        text-decoration: none;
+    }
+    a.captionOrange:hover
+    {
+        color: #eb5100;
+        text-decoration: none;
+        background-color: #eeeeee;
+        background-color: rgba(238, 238, 238, 0.7);
+    }
+    .bricon
+    {
+        background: url(static/img/browser-icons.html);
+    }
+</style>
+<!-- use jssor.slider.min.js instead for release -->
+<!-- jssor.slider.min.js = (jssor.js + jssor.slider.js) -->
+<script type="text/javascript" src="{% static 'js/jssor.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jssor.slider.js' %}"></script>
+<script>
+        jssor_slider2_starter = function (containerId) {
+
+            var _SlideshowTransitions = [
+            //Swing Outside in Stairs
+            {$Duration: 1200, x: 0.2, y: -0.1, $Delay: 20, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $Formation: $JssorSlideshowFormations$.$FormationStraightStairs, $Assembly: 260, $Easing: { $Left: $JssorEasing$.$EaseInWave, $Top: $JssorEasing$.$EaseInWave, $Clip: $JssorEasing$.$EaseOutQuad }, $Outside: true, $Round: { $Left: 1.3, $Top: 2.5} }
+
+            //Dodge Dance Outside out Stairs
+            , { $Duration: 1500, x: 0.3, y: -0.3, $Delay: 20, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.1, 0.9], $Top: [0.1, 0.9] }, $SlideOut: true, $Formation: $JssorSlideshowFormations$.$FormationStraightStairs, $Assembly: 260, $Easing: { $Left: $JssorEasing$.$EaseInJump, $Top: $JssorEasing$.$EaseInJump, $Clip: $JssorEasing$.$EaseOutQuad }, $Outside: true, $Round: { $Left: 0.8, $Top: 2.5} }
+
+            //Dodge Pet Outside in Stairs
+            , { $Duration: 1500, x: 0.2, y: -0.1, $Delay: 20, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $Formation: $JssorSlideshowFormations$.$FormationStraightStairs, $Assembly: 260, $Easing: { $Left: $JssorEasing$.$EaseInWave, $Top: $JssorEasing$.$EaseInWave, $Clip: $JssorEasing$.$EaseOutQuad }, $Outside: true, $Round: { $Left: 0.8, $Top: 2.5} }
+
+            //Dodge Dance Outside in Random
+            , { $Duration: 1500, x: 0.3, y: -0.3, $Delay: 80, $Cols: 8, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $Easing: { $Left: $JssorEasing$.$EaseInJump, $Top: $JssorEasing$.$EaseInJump, $Clip: $JssorEasing$.$EaseOutQuad }, $Outside: true, $Round: { $Left: 0.8, $Top: 2.5} }
+
+            //Flutter out Wind
+            , { $Duration: 1800, x: 1, y: 0.2, $Delay: 30, $Cols: 10, $Rows: 5, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $SlideOut: true, $Reverse: true, $Formation: $JssorSlideshowFormations$.$FormationStraightStairs, $Assembly: 2050, $Easing: { $Left: $JssorEasing$.$EaseInOutSine, $Top: $JssorEasing$.$EaseOutWave, $Clip: $JssorEasing$.$EaseInOutQuad }, $Outside: true, $Round: { $Top: 1.3} }
+
+            //Collapse Stairs
+            , { $Duration: 1200, $Delay: 30, $Cols: 8, $Rows: 4, $Clip: 15, $SlideOut: true, $Formation: $JssorSlideshowFormations$.$FormationStraightStairs, $Assembly: 2049, $Easing: $JssorEasing$.$EaseOutQuad }
+
+            //Collapse Random
+            , { $Duration: 1000, $Delay: 80, $Cols: 8, $Rows: 4, $Clip: 15, $SlideOut: true, $Easing: $JssorEasing$.$EaseOutQuad }
+
+            //Vertical Chess Stripe
+            , { $Duration: 1000, y: -1, $Cols: 12, $Formation: $JssorSlideshowFormations$.$FormationStraight, $ChessMode: { $Column: 12} }
+
+            //Extrude out Stripe
+            , { $Duration: 1000, x: -0.2, $Delay: 40, $Cols: 12, $SlideOut: true, $Formation: $JssorSlideshowFormations$.$FormationStraight, $Assembly: 260, $Easing: { $Left: $JssorEasing$.$EaseInOutExpo, $Opacity: $JssorEasing$.$EaseInOutQuad }, $Opacity: 2, $Outside: true, $Round: { $Top: 0.5} }
+
+            //Dominoes Stripe
+            , { $Duration: 2000, y: -1, $Delay: 60, $Cols: 15, $SlideOut: true, $Formation: $JssorSlideshowFormations$.$FormationStraight, $Easing: $JssorEasing$.$EaseOutJump, $Round: { $Top: 1.5} }
+            ];
+
+            var options = {
+                $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                $AutoPlaySteps: 1,                                  //[Optional] Steps to go for each navigation request (this options applys only when slideshow disabled), the default value is 1
+                $AutoPlayInterval: 4000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+                $PauseOnHover: 1,                               //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
+
+                $ArrowKeyNavigation: true,   			            //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
+                $SlideDuration: 500,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+                $MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
+                //$SlideWidth: 600,                                 //[Optional] Width of every slide in pixels, default value is width of 'slides' container
+                //$SlideHeight: 450,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
+                $SlideSpacing: 0, 					                //[Optional] Space between each slide in pixels, default value is 0
+                $DisplayPieces: 1,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
+                $ParkingPosition: 0,                                //[Optional] The offset position to park slide (this options applys only when slideshow disabled), default value is 0.
+                $UISearchMode: 1,                                   //[Optional] The way (0 parellel, 1 recursive, default value is 1) to search UI components (slides container, loading screen, navigator container, arrow navigator container, thumbnail navigator container etc).
+                $PlayOrientation: 1,                                //[Optional] Orientation to play slide (for auto play, navigation), 1 horizental, 2 vertical, 5 horizental reverse, 6 vertical reverse, default value is 1
+                $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+
+                $SlideshowOptions: {                                //[Optional] Options to specify and enable slideshow or not
+                    $Class: $JssorSlideshowRunner$,                 //[Required] Class to create instance of slideshow
+                    $Transitions: _SlideshowTransitions,            //[Required] An array of slideshow transitions to play slideshow
+                    $TransitionsOrder: 1,                           //[Optional] The way to choose transition to play slide, 1 Sequence, 0 Random
+                    $ShowLink: true                                    //[Optional] Whether to bring slide link on top of the slider when slideshow is running, default value is false
+                },
+
+                $BulletNavigatorOptions: {                                //[Optional] Options to specify and enable navigator or not
+                    $Class: $JssorBulletNavigator$,                       //[Required] Class to create navigator instance
+                    $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                    $AutoCenter: 0,                                 //[Optional] Auto center navigator in parent container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+                    $Steps: 1,                                      //[Optional] Steps to go for each navigation request, default value is 1
+                    $Lanes: 1,                                      //[Optional] Specify lanes to arrange items, default value is 1
+                    $SpacingX: 10,                                   //[Optional] Horizontal space between each item in pixel, default value is 0
+                    $SpacingY: 10,                                   //[Optional] Vertical space between each item in pixel, default value is 0
+                    $Orientation: 1                                 //[Optional] The orientation of the navigator, 1 horizontal, 2 vertical, default value is 1
+                },
+
+                $ArrowNavigatorOptions: {
+                    $Class: $JssorArrowNavigator$,              //[Requried] Class to create arrow navigator instance
+                    $ChanceToShow: 2                                //[Required] 0 Never, 1 Mouse Over, 2 Always
+                }
+            };
+
+            var jssor_slider2 = new $JssorSlider$(containerId, options);
+
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizes
+            function ScaleSlider() {
+                var parentWidth = jssor_slider2.$Elmt.parentNode.clientWidth;
+                if (parentWidth)
+                    jssor_slider2.$ScaleWidth(Math.min(parentWidth, 1260));
+                else
+                    $Jssor$.$Delay(ScaleSlider, 30);
+            }
+
+            ScaleSlider();
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+
+            $Jssor$.$AddEvent(window, "resize", $Jssor$.$WindowResizeFilter(window, ScaleSlider));
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            //responsive code end
+        }
+</script>
+<style>
+            /* jssor slider bullet navigator skin 01 css */
+            /*
+            .jssorb01 div           (normal)
+            .jssorb01 div:hover     (normal mouseover)
+            .jssorb01 .av           (active)
+            .jssorb01 .av:hover     (active mouseover)
+            .jssorb01 .dn           (mousedown)
+            */
+            .jssorb01 {
+                position: absolute;
+            }
+            .jssorb01 div, .jssorb01 div:hover, .jssorb01 .av {
+                position: absolute;
+                /* size of bullet elment */
+                width: 12px;
+                height: 12px;
+                filter: alpha(opacity=70);
+                opacity: .7;
+                overflow: hidden;
+                cursor: pointer;
+                border: #000 1px solid;
+            }
+            .jssorb01 div { background-color: gray; }
+            .jssorb01 div:hover, .jssorb01 .av:hover { background-color: #d3d3d3; }
+            .jssorb01 .av { background-color: #fff; }
+            .jssorb01 .dn, .jssorb01 .dn:hover { background-color: #555555; }
+</style>
+
+{% block content %}
+
+
+
+{% endblock content %}
+
+
+ <div class="footer">
+  <!-- Begin Top Footer -->
+  <div class="row top-footer" style="background-color:gold;">
+    <div class="large-12 columns" >
+      <div class="large-6 columns">
+        <h3 class="logo"><a href="/" style="color:red;"><i class="icon-heart icon-6x"></i> dwells here </a></h3>
+      </div>
+      <div class="large-6 columns">
+        <ul class="inline-list social right" style="color:green;">
+          <li><a class="smallipopBlue" href="https://www.facebook.com/" title="Facebook"><i class="icon-facebook-sign icon-2x"></i></a></li>
+          <li><a class="smallipopBlue" href="https://twitter.com/" title="Twitter"><i class="icon-twitter-sign icon-2x"></i></a></li>
+          <li><a class="smallipopBlue" href="https://plus.google.com/"title="Google+"><i class="icon-google-plus-sign icon-2x"></i></a></li>
+          <li><a class="smallipopBlue" href="https://www.linkedin.com/" title="Linkedin"><i class="icon-linkedin-sign icon-2x"></i></a></li>
+          <li><a class="smallipopBlue" href="https://www.pinterest.com/" title="Pinterest"><i class="icon-pinterest-sign icon-2x"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End Top Footer -->
+  <!-- Begin Middle Footer -->
+  <div class="row middle-footer">
+<!--    <div class="large-3 columns">-->
+        <h1 class="col-6" style=" background: linear-gradient(90deg,#0e3959 0%,#0e3959 30%, #03a9f5 30%, #03a9f5 100%);">
+            <img src="{% static 'img/78.png' %}" alt="" width="100px" height="50">
+            <img src="{% static 'img/34.png' %}" alt="" width="150" height="50">
+            <img src="{% static 'img/78.png' %}" alt="" width="100" height="50">
+        </h1>
+<!--    </div>-->
+    <div class="large-3 columns">
+
+        <img src="{% static 'img/78.png' %}" alt="" width="150" height="75">
+        <img src="{% static 'img/34.png' %}"  width="150" height="75">
+        <img src="{% static 'img/ag.png' %}" alt="" width="150" height="75">
+    </div>
+    <div  class="large-3 columns">
+      <h5>Quick Links</h5>
+      <ul align="justify" class="footer-list footer-border" style="font-family:gothic;">
+         <li><i class="icon-angle-right"></i><a target="_blank" rel="no follow"href="http://faithtabernacle.org.ng/mediacenter/">Bishop David Oyedepo</a></li>
+         <li><i class="icon-angle-right"></i><a target="_blank" rel="no follow"href="http://www.davidabioye.org.ng/">Bishop David Abioye</a></li>
+         <li><i class="icon-angle-right"></i><a target="_blank" rel="no follow"href="http://faithoyedepo.org/">Pastor Faith A. Oyedepo</a></li>
+         <li><i class="icon-angle-right"></i><a target="_blank" rel="no follow"href="http://covenantuniversity.edu.ng/">Covenant  University</a></li>
+         <li><i class="icon-angle-right"></i><a target="_blank" rel="no follow"href="http://lmu.edu.ng/">Landmark University</a></li>
+      </ul>
+    </div>
+    <div class="large-3 columns">
+     <h5>Featured Services</h5>
+      <ul align="justify" class="footer-list footer-border" style="font-family:gothic;">
+        <li><i class="icon-angle-right"></i><a href="{% url 'b:counsel' %}">Counselling</a></li>
+        <li><i class="icon-angle-right"></i><a href="{% url 'b:messages' %}"> Messages</a></li>
+        <li><i class="icon-angle-right"></i><a href="{% url 'b:pray' %}"> Prayer Requests</a></li>
+        <li><i class="icon-angle-right"></i><a href="{% url 'b:contact' %}">Contact Us</a></li>
+
+      </ul>
+    </div>
+     <div class="large-3 columns">
+       <h5>Worship with Us!</h5>
+      <ul align="justify" style="font-family:gothic;">
+
+             <highlight><span><i class="icon-home"></i></span>PASTOR SAMUEL AJAYI's MINISTRY<br/>
+                   KM 9, Queen Elizabeth Road, Total Garden<br/>
+                 Ibadan, Oyo State Nigeria <br/></highlight>
+             <highlight><i class="icon-phone"></i></highlight>(234) 548-528-7063 <br/>
+             <highlight ><i class="icon-envelope"></i></highlight> admin@ade.org</p>
+      </ul>
+      <ul class="inline-list">
+        <li>
+            <a class="smallipopBlue" href="https://www.facebook.com/" title="Facebook">
+                <i class="icon-facebook-sign icon-large"></i>
+            </a>
+        </li>
+        <li>
+            <a class="smallipopBlue" href="http://twitter.com/" title="Twitter">
+                <i class="icon-twitter-sign icon-large"></i>
+            </a>
+        </li>
+        <li>
+            <a class="smallipopBlue" href="http://www.google.com/" title="Google+">
+                <i class="icon-google-plus-sign icon-large"></i>
+            </a>
+        </li>
+        <li>
+            <a class="smallipopBlue" href="http://www.linkedin.com/" title="Linkedin">
+                <i class="icon-linkedin-sign icon-large"></i>
+            </a>
+        </li>
+        <li>
+            <a class="smallipopBlue" href="http://www.pinterest.com/" title="Pinterest">
+                <i class="icon-pinterest-sign icon-large"></i>
+            </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row bottom-footer" style="color:white;" >
+    <div class="large-6 columns">
+      <ul class="inline-list center" style="font-family:gothic;">
+        <li><a href="/PASTOR-SAMUEL-AJAYI/" target="_blank"><i class="icon-user icon-6x"></i> Admin</a></li>
+        <li><a href="{% url 'b:counsel' %}">Pastoral Counselling</a></li>
+        <li><a href="{% url 'b:pray' %}"> Prayer Requests</a></li>
+        <li><a href="{% url 'b:videos' %}">Download Center</a></li>
+        <li><a href="{% url 'b:contact' %}">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="large-6 columns">
+      <p class="right" style="margin-right:45px">&copy; 2011 - <script>document.write(new Date().getFullYear());</script> &amp; Beyond - PASTOR SAMUEL AJAYI's MINISTRY, Nigeria.  All Rights Reserved.</p>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+</div>
+
+<script src="{% static 'js/foundation.min.js' %}"></script>
+  <script>
+    $(document).foundation();
+  </script>
+  <!-- Smallipop JS - Tooltips -->
+  <script type="text/javascript" src="{% static 'plugins/smallipop/lib/contrib/prettify.js' %}"></script>
+  <script type="text/javascript" src="{% static 'plugins/smallipop/lib/jquery.smallipop.js' %}"></script>
+  <script type="text/javascript" src="{% static 'plugins/smallipop/lib/smallipop.calls.js' %}"></script>
+  <!-- Initialize JS Plugins -->
+  <script src="{% static 'js/app-bottom-calls.js' %}"></script>
+</div>
+
+
+
+	<script src="{% static 'js/jquery.backstretch.js' %}"></script>
+
+<!-- Back To Top -->
+<a href="#" class="scrollup"><span class="icon-chevron-up"></span></a>
+<!-- End Back To Top -->
+
+</body>
+
+
+</html>

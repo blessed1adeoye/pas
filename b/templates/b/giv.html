@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+{% block content %}
+
+<title>Online Giving | Winners Chapel International - Total Garden </title>
+
+
+
+<div class="row"><!-- Main Content -->    
+	<div class="large-12 columns"><!-- End Special Row -->
+
+	  <div  class="row"><!-- Special Row -->
+      
+		<div class="large-5 columns"><!-- Column 5 -->             
+
+                    
+            <div class="panel black radius"><!-- Panel -->
+          		<h6 class="center">As long as the earth remaineth ...</h6>
+        	</div><!-- End Panel -->
+                  
+      		<div class="panel radius"><!-- Panel -->
+      			<div class="large-12 columns">
+      				<p align="justify">
+                    We become more like God when we give and every time we are generous, we discover a God that will never be out-given.
+                    <br/> <br/>
+                    <strong>is our official payment gateway.</strong> <br/>To Process your offering, you will be redirected to our online giving platform in a secure site. <br/>Giving Online is <strong>QUICK</strong> and your information is <strong>SAFE and SECURE.</strong>
+                    <br/>
+				</div>
+      			<div class="large-12 columns">
+                     <img src="{% static 'img/g.jpg' %}" alt="Types of offering"/>
+					 <img src="{% static 'img/4.jpg' %}" alt="Types of offering"/>
+      			</div>
+      			<div class="clearfix"></div>
+			</div><!-- End Panel -->
+              
+      		<div class="panel radius" align="center"><!-- Panel -->
+      			                   
+      			<div class="large-12 columns" align="center" style="padding:0px;">
+      				 <img src="{% static 'img/ae.png' %}">
+      			</div> 	
+                <div class="clearfix"></div>
+      		</div><!-- End Panel -->                                                                       
+                    
+		</div><!-- End Column 5 --> 
+                    
+		<div class="large-7 columns"><!-- Column 7 -->
+                    
+			<article class="post">
+				<div class="post_img">
+                    <div class="orbit-container"><!-- Orbit Container -->
+  						<ul data-orbit="" class="orbit-slides-container">
+    						<li>
+                    			<img src="{% static 'img/e-1.jpg' %}">
+    						</li>
+    						<li class="active">
+      							<img src="{% static 'img/e2.jpg' %}">
+    						</li>
+    						<li>
+      							<img src="{% static 'img/e3.jpg' %}">
+    						</li>
+                            <li>
+      							<img src="{% static 'img/e4.jpg' %}">
+    						</li>
+  						</ul>  
+					</div><!-- End Orbit Container -->
+				</div>
+				<h3 align="center">Online Giving is <b>Easy, Secure, Fast &amp; Effective</b></h3>
+				<p class="post_text"><b>Online:</b><br/>
+					Whether you are giving a single gift or scheduling a recurrent ongoing offering or tithe, Our online giving option is quick, easy, and secure.  With our platform, you can give by transfering into church account from your account, ; whichever is more convenient for you. Please note that we are unable to refund donations already made to Winners Chapel, Total Garden, Ibadan.
+
+				</p>
+
+				<p class="post_text"><b>By Mail:</b><br/>
+					Besides our daily Covenant Hour of Prayer, we have scheduled services on Sundays and Wednesday but during the week, you can also give by mailing your gift to the Church office. All Checks should be addressed to Living Faith Church, Total Garden, Ibadan.
+				</p>
+				<p class="post_text"><b>In Service</b><br/>
+					For your convenience and for proper accounting purposes, offerings, in properly labeled envelopes, should be dropped into the offering basket as we come around during the Offering; in the service.
+				</p><br>
+				{% for x in a %}
+				  <blockquote><i style="font-family:times new roman; color:#8E1618;"> {{x.scr | safe }}.</i> <b>{{x.ref}}</b></blockquote>
+
+				{% endfor %}
+<!--				<blockquote><i style="font-family:times new roman; color:#8E1618;">  For God is not unrighteous to forget your work and labour of love, which ye have shewed toward his name, in that ye have ministered to the saints, and do minister.</i> <b>Hebrews 6:10 (KJV)</b></blockquote>-->
+             
+                <img align="center" src="{% static 'img/4wqys-to-give.png' %}" alt="4 Ways to give"/>
+			</article>
+                
+		</div><!-- End Column 7 -->
+                    
+	</div><!-- End Special Row -->      
+      
+	<hr />               
+        
+    </div><!-- End Column 12 -->    
+
+	</div><!-- End Main Content -->
+
+{% endblock content %}

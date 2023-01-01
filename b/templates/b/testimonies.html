@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+{% block content %}
+<title>Testimonies | Winners Chapel International - Total Garden | winnerschapeltg.org</title>
+
+<div class="row">
+  <div class="large-12 columns main-content-top">
+    <!-- Row -->
+    <div class="row">
+      <div class="large-6 columns">
+        <h2>Signs &amp; Wonders Today</h2>
+      </div>
+      <div class="large-6 columns">
+        <ul class="breadcrumbs right">
+          <li><a href="/">Home</a></li>
+          <li class="current"><a href="#">Testimonies</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row band3">
+  <h4 align="center"><strong>Acts Of a Mighty God at Winners Chapel International, Total Garden, Ibadan, Nigeria </strong></h4>
+    <p style="font-size: 13px; color:gold; margin-left:6px;">Individually and corporately, God has been Good to us. With humbling testimonies of outstanding feats, divine visitations
+        and deliverance from destruction, no one can deny that God's presence is lavishly present in this assembly; and that the Liberation Mandate is truly in action at
+        Winners Chapel International, Total Garden, Ibadan, Nigeria.<br/>
+    Below are a few of our outstanding testimonies...
+    </p>
+</div>
+
+<div class="row main-content focuscontent">
+
+<!-- Row -->
+      {% for x in test %}
+    <div style="padding:10px;">
+      <div class="large-6 columns">
+        <article class="post">
+          <div class="post_img"> <img src="/media/{{x.t_img}}" alt="testifier">
+            <ul class="meta">
+            <li class="calendar"> {{x.t_month}} {{x.t_day}}, {{x.t_year}}</li>
+              <li class="comments">{{x.t_name}}.</li>
+            </ul>
+          </div>
+          <h3 align="center"><a href="#"> <strong>{{x.t_title}}.</strong></a></h3>
+          <p class="post_text">{{x.t_body| safe}}</p></b><br/><br/><br/>
+        </article>
+      </div>
+
+     {% endfor %}
+    </div>
+        <br><br><br>
+    <div style="background-color: #000" >
+        {% include 'b/page.html' with page=test %}
+    </div>
+</div>
+<div align="justify" style="color:gold; background-color:green;">
+    <strong >Do you have a testimony?</strong> <a href="mailto:testimonies@winnerschapeltoronto.org?cc=technical@winnerschapeltoronto.org, ani@winnerschapeltoronto.org, info@winnerschapeltoronto.org&bcc=testimonies@winnerschapeltoronto.org&subject=Good%20News"><strong>Email Us</strong></a>
+</div>
+      <div class="clearfix"></div>
+
+
+
+
+
+{% endblock content %}

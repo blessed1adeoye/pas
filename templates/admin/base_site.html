@@ -1,0 +1,29 @@
+{% extends 'admin/base.html' %}
+
+{% load static %}
+
+{% block branding %}
+<link  href="{% static 'img/78.png' %}" rel="icon">
+<link href="{% static 'img/78.png' %}"  rel="apple-touch-icon">
+
+
+
+<h1 id="header" style="background-color:lightgreen">
+    <img src="{% static 'img/78.png' %}" alt="" width="100px" height="50">
+    <img src="{% static 'img/34.png' %}" alt="" width="150" height="50">
+    <img src="{% static 'img/78.png' %}" alt="" width="100" height="50">
+
+</h1>
+<br>
+
+<h1 align="justify" style="font-family:gothic;decoration:none; color:gold;">
+
+</h1>
+
+{% endblock branding %}
+
+
+{% block extrastyle %}
+<link rel="stylesheet" href="{% static 'admin/css/admin.css' %}">
+{% endblock extrastyle %}
+

@@ -1,0 +1,149 @@
+ {% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<style>
+@font-face {
+	font-family: 'gothic';
+	src: url('../fonts/gothic.eot');
+	src: local('gothic'), url('../fonts/gothic.woff') format('woff'), url('../fonts/gothic.ttf') format('truetype');
+}
+/* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_9785">Text with this font applied</p> */
+.fontsforweb_fontid_9785 {
+	font-family: 'gothic' !important;
+}
+
+@font-face {
+  font-family: 'Didact Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: local('../fonts/Didact Gothic'), local('../fonts/DidactGothic'), url(http://themes.googleusercontent.com/static/fonts/didactgothic/v5/v8_72sD3DYMKyM0dn3LtWp_RtrTXGeaL_Dia6_H9gNs.woff) format('woff');
+}
+</style>
+
+<!--BREADCRUMBS BEGINS -->
+<div class="row main-content" style="background:lightgreen;"><!-- Main Content -->
+  <div class="large-12 columns">
+   <div class="row band3"><!-- Row -->
+
+    <div class="large-7 columns">
+        <script language="javascript" type="text/javascript" src="{% static 'js/validations.js' %}"></script>
+        <script language="javascript" type="text/javascript"></script>
+
+
+                <h3>Prayer Request Form </h3>
+        <form method="POST" action=""  >
+            {% csrf_token %}
+          <fieldset>
+            <legend>Please Fill this Form to Send us your Prayer Request!</legend>
+
+
+            <div id="status"></div>
+            <div class="contact_form">
+              <div class="row">
+                <div class="small-4 columns">
+
+                    <input type="text" name="full_name"   placeholder="Your Full Name" />
+
+                  <br />
+                </div>
+                <div class="small-4 columns">
+                  <input type="text" name="residential"  placeholder="Your Residential Address" />
+                  <br />
+                </div>
+                <div class="small-4 columns">
+                  <input type="email" name="email"     placeholder="Your Email" />
+                  <br />
+                </div>
+                <div class="small-4 columns">
+                  <input type="number" name="phone"  placeholder="Phone No (999-999-9999)"  />
+                  <br />
+                </div>
+                 <div class="small-4 columns">
+                  <input type="text" name="church"  placeholder="Do you worship in this Assembly?" />
+
+                  <br /></div>
+
+                <div class="small-4 columns">
+                  <input type="text"  name="city" placeholder="Your City" />
+                  <br />
+                </div>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <div class="small-12 columns"><b style="color:#FFF;">Will You Want a Call Back?</b> <font style="color:#FFF; padding-left:5%;">
+                  <input type="radio"  name="call" value="Yes"  />
+                  Yes
+                  <input type="radio" name="call" value="No"/>
+                  No
+                </div>
+                <br/>
+                <br/>
+
+                <div class="small-12 columns"><b style="color:#FFF;">This prayer is for:</b> <font style="color:#FFF; padding-left:5%;">
+                  <input type="radio" name="pray_for" value="Myself"  />
+                  Me
+                  <input type="radio" name="pray_for" value="Spouse"/>
+                    Spouse
+                  <input type="radio" name="pray_for" value="Child"/>
+                      Child
+                  <input type="radio" name="pray_for" value="Friend"/>
+                       Friend
+                  <input type="radio" name="pray_for" value="Siblings"/>
+                       Siblings
+                </div></font>
+                <br/>
+                <div class="small-12 columns" style="padding-top:5%;">
+                  <textarea cols="7" rows="7"  name="prayer"  placeholder="Please Send us a Summary of your Prayer Request"></textarea>
+                  <br />
+                </div>
+                <div class="small-12 columns">
+                  <input type="submit" class="button success radius medium" value="Send Petition"  />
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      <div class="large-5 columns">
+        <h3 align="center">God Answers Prayers!!!</h3>
+         <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px;">PASTOR SAMUEL AJAYI's MINISTRY: The home of
+          <highlight style="color: gold;"> <b>Signs &amp; Wonders.</b></highlight>
+          <br/><br/>
+                        “The effectual fervent prayer of a righteous
+                man availeth much” (James 5:16).  <br/><br/>
+                Prayer is that vital link that connects us with our heavenly Father.<br/>
+                Biblical prayer conotes our crying to God because we have an assurance that He hears us.<br/>
+                Prayer is an incredible privilege: it is able to move the hand of God in seemingly hopeless situations.<br/><br/>
+
+                <b>In this Commission, We believe that:</b><br/>
+                          God Answers prayers<br/>
+                         God will honor every prayer offered in faith<br/>
+
+                  <b>Your long awaited turn-around and change of story has come!</b>
+         </p>
+        <div class="contact-details">
+           <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px;"><span><i class="icon-home"></i></span>Address: KM 9 QUEEN ELIZABETH ROAD TOTAL GARDEN IBADAN </p>
+           <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px;"><span><i class="icon-phone"></i></span>Phone: (416) 749-5191</p>
+           <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px;"><span><i class="icon-envelope"></i></span>E-mail: prayers@lfctotalgarden.org</p>
+        </div>
+        <br />
+        <ul class="inline-list" style="padding-left:30px;">
+          <li><a class="smallipopBlue" href="#" title="Facebook"><i class="icon-facebook-sign icon-2x"></i></a></li>
+          <li><a class="smallipopBlue" href="#" title="Twitter"><i class="icon-twitter-sign icon-2x"></i></a></li>
+          <li><a class="smallipopBlue" href="#" title="Google+"><i class="icon-google-plus-sign icon-2x"></i></a></li>
+          <li><a class="smallipopBlue" href="#" title="Linkedin"><i class="icon-linkedin-sign icon-2x"></i></a></li>
+          <li><a class="smallipopBlue" href="#" title="Pinterest"><i class="icon-pinterest-sign icon-2x"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Main Content -->
+
+  </div>
+</div>
+  <!-- End Special Row -->
+{% endblock content %}

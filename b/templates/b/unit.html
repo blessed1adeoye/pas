@@ -1,0 +1,221 @@
+<!--{% load static %}-->
+    <style>
+.jcarousel-skin-tango .jcarousel-container-vertical {
+    height: 409px;
+    padding: 5px 10px 15px 30px;
+	 font-family: "century gothic";
+	 font-size:13px;
+	/* color:#000;
+	 background: #fff;*/
+	 border: solid 1px #cccccc;
+    color: #4e4e4e;
+    background: #F2F2F2;
+    overflow: hidden;
+}
+
+.jcarousel-skin-tango .jcarousel-clip {
+    overflow: hidden;
+}
+
+.jcarousel-skin-tango .jcarousel-clip-vertical {
+    height: 395px;
+}
+
+.jcarousel-skin-tango .jcarousel-item {
+    height: 147x;
+}
+
+.jcarousel-skin-tango .jcarousel-item-placeholder {
+    background: #fff;
+    color: #000;
+}
+
+/**
+ *  Vertical Buttons
+ */
+.jcarousel-skin-tango .jcarousel-next-vertical {
+    position: absolute;
+    bottom: 5px;
+	 bottom: 5px;
+    left: 0px;
+    width: 340px;
+    height: 14px;
+    cursor: pointer;
+    background: transparent url(./static/img/down.gif) no-repeat 0 0;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-vertical {
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    width: 340px;
+    height: 14px;
+    cursor: pointer;
+    background: transparent url(./static/img/up.gif) no-repeat 0 0;
+}
+
+.jcarousel-skin-tango a
+{
+    font-weight:bold;
+	text-decoration:none;
+}
+
+.jcarousel-skin-tango .ql-img
+{
+    padding-right: 10px;
+    float: left;
+    width: 90px;
+    height: 68px;
+}
+
+.jcarousel-skin-tango li
+{
+	padding:15px 0 6px 0;
+    border-bottom: 1px solid #517da6;
+    /*min-height:100px;*/
+}
+
+.jcarousel-skin-tango li.last
+{
+	border-bottom:none;
+	padding:10px 0 0 0;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="{% static 'js/jquery-ui.html' %}">
+<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.jcarousel.min.js' %}"></script>
+
+
+  <script type="text/javascript">
+
+      function mycarousel_initCallback(carousel)
+      {
+      // Disable autoscrolling if the user clicks the prev or next button.
+      carousel.buttonNext.bind('click', function() {
+      carousel.startAuto(0);
+      });
+
+      carousel.buttonPrev.bind('click', function() {
+      carousel.startAuto(0);
+      });
+
+      // Pause autoscrolling if the user moves with the cursor over the clip.
+      carousel.clip.hover(function() {
+      carousel.stopAuto();
+      }, function() {
+      carousel.startAuto();
+      });
+      };
+
+    jQuery(document).ready(function() {
+        jQuery('#qlink-carousel').jcarousel({
+            auto: 4,
+            wrap: 'circular',
+            scroll: 1,
+            vertical: true,
+            animation: 1200,
+            initCallback: mycarousel_initCallback
+        });
+    });
+
+</script>
+    <div style="width:375px">
+ <div align="center">
+ <img src="{% static 'img/banners/serviceGroupHeader.png' %}" alt="Service Group Header"/></div>
+
+<div class=" jcarousel-skin-tango"><div class="jcarousel-container jcarousel-container-vertical" style="position: relative; display: block;"><div class="jcarousel-clip jcarousel-clip-vertical" style="position: relative;">
+ <ul id="qlink-carousel" class="jcarousel jcarousel-list jcarousel-list-vertical" style="overflow: hidden; position: relative; top: -238px; margin: 0px; padding: 0px; left: 0px; height: 814px;">
+
+      <li class="jcarousel-item jcarousel-item-vertical jcarousel-item-1 jcarousel-item-1-vertical" jcarouselindex="1" style="float: left; list-style: none;">
+        <img src="{% static 'img/protocol-ic.png' %}" class="ql-img">
+        <a href="{% url 'b:usher' %}"><b style="font-size:16px;">USHERS | PROTOCOL</b></a><br/>
+       This team welcomes worshippers and directs them to their respective seats, maintain order during services and meetings...
+      </li>
+
+       <li class="jcarousel-item jcarousel-item-vertical jcarousel-item-2 jcarousel-item-2-vertical" jcarouselindex="2" style="float: left; list-style: none;">
+       <img src="{% static 'img/decor.png' %}" class="ql-img">
+        <a href="{% url 'b:decorate' %}"><b style="font-size:16px;">DECORATION UNIT</b></a><br/>
+        This is a creative team with individual specialized skills that they bring on board to beatify Gods House...
+      </li>
+
+      <li class="jcarousel-item jcarousel-item-vertical jcarousel-item-3 jcarousel-item-3-vertical" jcarouselindex="3" style="float: left; list-style: none;">
+        <img src="{% static 'img/kiddies.png' %}" class="ql-img">
+         <a href="{% url 'b:children' %}"><b style="font-size:16px;">CHILDREN'S MINISTRY</b></a> <br/>
+             This is a team of a colorful, energetic, entertaining and dynamic children ministers, focused on teaching the word of faith to children.
+      </li>
+
+      <li class="jcarousel-item jcarousel-item-vertical jcarousel-item-4 jcarousel-item-4-vertical" jcarouselindex="4" style="float: left; list-style: none;">
+         <img src="{% static 'img/hosp.png' %}"class="ql-img">
+         <a href="{% url 'b:hospitality' %}"><b style="font-size:16px;">HOSPITALITY TEAM</b></a> <br/>
+             This team give the warm Winners welcome to worshippers, provide adequate Christian care during services...
+             </li>
+
+               <li class="jcarousel-item jcarousel-item-vertical jcarousel-item-4 jcarousel-item-4-vertical" jcarouselindex="4" style="float: left; list-style: none;">
+         <img src="{% static 'img/drama-ic.png' %}"class="ql-img">
+         <a href="../hospitality/index.html"><b style="font-size:16px;">THE JOEL COMPANY</b></a> <br/>
+           This team propagate the gospel through drama to liberate worshipers from the oppressions of the devil...
+             </li>
+
+               <li class="jcarousel-item jcarousel-item-vertical jcarousel-item-4 jcarousel-item-4-vertical" jcarouselindex="4" style="float: left; list-style: none;">
+         <img src="{% static 'img/sanctuary-ic.png' %}"class="ql-img">
+         <a href="../sanctuary/index.html"><b style="font-size:16px;">SANCTUARY KEEPERS</b></a> <br/>
+               This team  is responsible for maintaining a well organised and orderly use of the Sanctuary before, during and after Services... </li>
+
+
+             <li class="jcarousel-item jcarousel-item-vertical jcarousel-item-5 jcarousel-item-5-vertical" jcarouselindex="5" style="float: left; list-style: none;">
+                <img src="{% static 'img/evangelism.png' %}" class="ql-img">
+                <a href="../harvesters_squad/index.html"><b style="font-size:16px;">HARVESTERS' SQUAD</b></a><br/>
+                      This comprise ardent soul-wiinners who preach and teach the word of God with the utilization of tracts to win souls...
+             </li>
+
+            <li class="jcarousel-item jcarousel-item-vertical jcarousel-item-6 jcarousel-item-6-vertical" jcarouselindex="6" style="float: left; list-style: none;">
+                   <img src="{% static 'img/akam.png' %}"class="ql-img">
+                  <a href="../prayerForce/index.html"><b style="font-size:16px;">THE PRAYER FORCE</b></a> <br/>
+                           The prayer team forms a formidable force within the Church for continuous spiritual ...
+            </li>
+
+         <li class="jcarousel-item jcarousel-item-vertical jcarousel-item-6 jcarousel-item-6-vertical" jcarouselindex="6" style="float: left; list-style: none;">
+               <img src="{% static 'img/choir-banner.jpg' %}"  class="ql-img">
+              <a href="../choir/index.html"><b style="font-size:16px;">CHOIR | PRAISE TEAM</b></a> <br/>
+                      The choir leads the congregation into the high praises of God and ultimately his presence...
+         </li>
+
+         <li class="jcarousel-item jcarousel-item-vertical jcarousel-item-6 jcarousel-item-6-vertical" jcarouselindex="6" style="float: left; list-style: none;">
+               <img src="{% static 'img/protocol-ic.png' %}" class="ql-img">
+              <a href=""><b style="font-size:16px;">USHERS | PROTOCOL</b></a> <br/>
+                This team welcomes worshippers and directs them to their respective seats, maintain order during services and meetings...
+         </li>
+
+         <li class="jcarousel-item jcarousel-item-vertical jcarousel-item-6 jcarousel-item-6-vertical" jcarouselindex="6" style="float: left; list-style: none;">
+           <img src="{% static 'img/medical-ic.png' %}" class="ql-img">
+            <a href=""><b style="font-size:16px;">THE MEDICAL TEAM</b></a> <br/>
+                    Trained and certified medical professionals who are ready to respond to medical emergencies...
+        </li>
+
+        <li class="jcarousel-item jcarousel-item-vertical jcarousel-item-6 jcarousel-item-6-vertical" jcarouselindex="6" style="float: left; list-style: none;">
+           <img src="{% static 'img/security-ic.png' %}"  class="ql-img">
+            <a href=""><b style="font-size:16px;">TCU | SECURITY | CCU</b></a> <br/>
+                     Responsible for routine protocol duties within the Church premises during services ...
+        </li>
+
+  </ul>
+</div>
+  <div class="jcarousel-prev jcarousel-prev-vertical" disabled="false" style="display:
+   block;"></div><div class="jcarousel-next jcarousel-next-vertical" disabled="false" style="display: block;">
+   </div>
+
+    </div>
+
+
+
+    <div id="rotator-tooltip" class="img-down" style="paddint-top:55px;"></div>        <br/>
+        <br/>
+        <br/>
+
+        <br/>
+        <br/>
+        <br/> <br/>
+       <img src="{% static 'img/banners/invitation.png' %}" alt="Invite a Friend" border="0" usemap="#Map"/>
+
+      </div>
+    </div>

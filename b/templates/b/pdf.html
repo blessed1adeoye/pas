@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+{% block content %}
+<title>RESOURCES | Winners Chapel International - Total Garden | winnerschapeltg.org</title>
+
+<div class="row showcase"> <img src="{% static 'img/we7.png' %}" /> </div>
+<!-- Main Content -->
+<div class="row main-content">
+<div class="large-12 columns">
+
+<!-- Row   -->
+<div class="row band3">
+  <div class="large-9 push-3 columns">
+    <h4 align="center">Download Resources to Empower your Faith in Christ</h4>
+    <p class="fontsforweb_fontid_9785" style="font-size: 13px;"> You can now download resources to empower your faith and set you on a new standard by visiting this DOWNLOAD center.<br/>
+      We provide weekly resources, made available at our headquarters website, to ensure you are ever up to date and refreshed in all matters of life.</p>
+
+    <!-- Tables -->
+    <div class="row">
+      <div class="large-12 columns">
+        <table>
+          <thead>
+            <tr>
+              <th width="455">Available Resources</th>
+              <th width="152">Language</th>
+              <th width="182">Download Size</th>
+              <th width="199">Download Button</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="closealldiv" id="showing0">
+              {% for x in pdf %}
+              <td style="padding-left:25px;"><b>{{x.title}}<br/>
+                (Available for Download) </b><br/><b>({{x.date_day}} {{x.date_month}}, {{x.date_year}})</b></td>
+              <td style="padding-left:25px;"> {{x.language}}</td>
+              <td style="padding-left:25px;">{{x.size}}MB </td>
+              <td style="padding-left:25px;"><a target="_blank" href="/media/{{x.document}}" class="button alert">DOWNLOAD</a></td>
+              {% endfor %}
+            </tr>
+          </tbody>
+        </table>
+        <div id="plm" class="dynamic_pagination">Showing Records <span id="startofproduct_span">1</span>-<span id="lastofproduct_span">10</span> of <span id="totalnumberofproduct_span">25</span> <a id="pervious_button" style="cursor:pointer; display: none;" onclick="return next_pervious()">[Previous] </a> <a id="next_button" style="cursor:pointer;" onclick="return previous_next()">[Next]</a></div>
+        <input type="hidden" name="startofproduct" id="startofproduct" value="1"/>
+        <input type="hidden" name="lastofproduct" id="lastofproduct" value="10"/>
+        <input type="hidden" name="totalnumberofproduct" id="totalnumberofproduct" value="25"/>
+      </div>
+    </div>
+  </div>
+  <div class="large-3 pull-9 columns">
+
+    <!-- <h3>Side Navigation</h3> -->
+
+    <!-- Sidebar Navigation -->
+    <div class="section-container accordion" data-section>
+      <section class="section active">
+        <h2 class="title" align="center" style="font-weight:bolder;">DOWNLOAD INSTRUCTIONS</h2>
+        <div class="content">
+          <div align="center"> <img src="{% static 'img/banners/we5.png' %}" /> </div>
+          <div align="center"> <img src="{% static 'img/a1.jpg' %}" /> </div>
+          <p style="font-family:century gothic; color:#000000; font-size:11px; text-align:justify;">You must have a PDF viewer installed on your computer before you can use a PDF file and
+
+            we  recommend the Adobe Reader software. It is a free and trusted standard for reliably viewing, printing, and annotating PDF documents. It's the only PDF file viewer that can open and interact with all types of PDF content, including forms and multimedia.<br/>
+            <br/>
+            <a target="_blank"  href="http://get.adobe.com/reader/" target="_blank" title="This link will open a page in a new browser window">Download the latest version of Adobe Reader</a><br/>
+            (Opens new window)</p>
+          <br/>
+          <p  style="font-family:century gothic; color:#000000; font-size:11px; text-align:justify;"> To do this, follow the download instructions.<br/>
+            Then, open the file from your computer.<br/>
+            <br style="font-family:century gothic; color:#000000; font-size:11px; text-align:justify;"/>
+            <b>Opening PDFs on your computer</b></p>
+          <ul style="font-family:century gothic; color:#000000; font-size:11px; padding-left:15px; text-align:justify;">
+            <li> Right click on the PDF.</li>
+            <li> Select "Open with".</li>
+            <li> Select "Choose program".</li>
+            <li> Select "Adobe Acrobat Reader".</li>
+            <li> Make sure to check the box that says "Always use this program to open these files".</li>
+            <li> Select "OK".</li>
+            <li> If a PDF document opens up blank, or you get an error message, you can try:</li>
+            <li> Opening the document using a different browser; or installing the newest version of Internet Explorer (or your desired browser)</li>
+          </ul>
+        </div>
+        <BR><BR/>
+<!--         <a href="https://s05.flagcounter.com/more/9Ot"><img src="https://s05.flagcounter.com/count2/9Ot/bg_FFFFFF/txt_000000/border_CCCCCC/columns_5/maxflags_26/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="website Counter for WCIT" border="0"></a>-->
+
+      </section>
+    </div>
+    <!-- End Sidebar Navigation -->
+
+  </div>
+</div>
+<!-- End Row -->
+
+<!-- End Main Content -->
+
+
+
+
+
+{% endblock content %}

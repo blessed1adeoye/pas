@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+{% block content %}
+<title>WINNERS SATELITE FELLOWSHIP  | BISHOP DAVID OYEDEPO - PRESIDING BISHOP, Winners Chapel Worldwide</title>
+
+<div class="row main-content">
+<div class="large-12 columns">
+<div class="row bandblack">
+<div style="padding:1%;" class="large-12 columns">
+  <article class="post2" style="width:auto; color:#000000; padding:1 20px 0 20px;">
+    <div class="post_img"  style="width:auto;">
+      <div class="orbit-container"><!-- Orbit Container -->
+        <img width="1260px" height="450px" src="{% static 'img/worship.jpg' %}"> </div>
+
+    </div>
+    <h3 align="center" style="color:#000; font-weight:bold;">Winners' Satellite Fellowship</h3>
+    <p align="justify" class="post_text" style="font-size: 15px; padding: 0 40px; font-family:century gothic;">
+        The Winners’ Satellite Fellowship (WSF) is the share and care centre for the winners’ family.
+        It is the home church where all winners gather together for a time of spiritual refreshing outside the church environment.
+        It is a Christian fellowship forum created for caring for every member;<br>
+        <b>"Everyday they continued to meet together in the temple courts.
+            They broke bread in their homes and ate together with glad and sincere hearts" (Acts 2:46).</b>
+        <br/>
+      The WSF fourfold operational agenda includes:</p>
+    <p align="justify" class="post_text" style="font-size: 15px; padding: 0 40px;font-family:century gothic;""><b> - SPIRITUAL GROWTH OF MEMBERS<br/>
+      - CARE GROWTH OF MEMBERS<br/>
+      - LEADERSHIP GROWTH<br/>
+      - CHURCH GROWTH<br/>
+      </b></p>
+    <p align="justify" class="post_text" style="font-size: 15px; padding: 0 40px;font-family:century gothic;""> After the order of the 1st century New Testament church, the WSF is out To Care (having a Heart of compassion), To Feed (nourish balanced saints), To Teach (impart knowledge and enlightenment) and To Lead the members (i.e. members’ becoming leading leaders). The WSF brings Jesus to your doorstep with the following results:<br/>
+      - Undeniable signs and wonders<br/>
+      - Life changing experiences<br/>
+      - Christian care and loving interactions<br/>
+      - Destiny molding teachings;  and much more in a relaxed environment.<br/>
+    </p>
+    <p align="justify" class="post_text" style="font-size: 15px; padding: 0 40px;font-family:century gothic;""><b>Meeting Times:</b><br/>
+      - Every Saturday - 5:00 pm - 6:00 pm
+    </p>
+    <div class="row" style="font-family:century gothic;">
+      <div class="large-12 columns" style="padding:2%;">
+        <h3 align="center" style="color:#000;"><b>WSF Locations</b> </h3>
+        <table width="100%">
+          <thead>
+            <tr>
+              <th width="192"><i class="icon-home"></i>Location</th>
+              <th width="225"><i class="icon-building"></i>Fellowship Centre <br>* Host Residential Address</th>
+              <th width="192"><i class="icon-user"></i> Host Name</th>
+              <th width="172"><i class=" icon-user-md"></i>Minister i/c</th>
+              <th width="191"><i class="icon-phone"></i>Center Contact Number</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for x in wsf %}
+            <tr>
+              <td><b>{{x.location}}</b></td>
+              <td>{{x.centre}}, <br>{{x.residence}}</td>
+              <td>{{x.Host}}</td>
+              <td>{{x.minister}}</td>
+              <td>{{x.phone}}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <hr />
+  </article>
+  <!-- End Tables -->
+</div>
+<br clear="all">
+<br>
+
+
+{% block abc %} {% include 'b/abc.html' %} {% endblock abc %}
+
+		</div>
+</div>
+
+{% endblock content %}

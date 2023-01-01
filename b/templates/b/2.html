@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="row main-content">
+  <div class="large-12 columns" style="background-color:cadetblue;">
+
+      <div class="large-10 columns">
+          <img src="/media/{{sms.img}}" alt="{{x.title}}" class="card-img-top">
+          <div class="card-body">
+              <h6><b>{{sms.Theme}}</b> - {{sms.Theme_reference}}</h6>
+                <hr>
+              <p>{{sms.message | safe}}</p>
+          </div>
+      </div>
+      <br><br><br>
+
+  </div>
+</div>
+
+
+{% endblock content %}

@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+{% block content %}
+<title>SPIRITUAL WEEK OF EMPHASIS | Winners Chapel International - Total Garden | winnerschapeltg.org</title>
+
+﻿<div class="row main-content">
+<!-- Main Content -->
+<div class="large-12 columns">
+<div class="row bandblack">
+<!-- Row -->
+<div style="padding:1%;" class="large-12 columns">
+  {% for x in week %}
+  <article class="post2" style="width:auto; color:#000000; padding:1 20px 0 20px;">
+    <div class="post_img"  style="width:auto;">
+      <div class="orbit-container"><!-- Orbit Container -->
+        <img src="/media/{{x.img}}"> </div>
+      <!-- End Orbit Container -->
+    </div>
+    <h3 align="center" style="color:#000; font-weight:normal;">The Week of Spiritual Emphasis</h3>
+    <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px; padding-left:30px;">The Winners family worldwide congregate at their local assemblies during the first Wednesday, Thursday and Friday of every month for the "Week of Spiritual Emphasis".</p>
+
+    <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px; padding-left:30px;">This is a time when we seek the face of God for the month with fasting and prayer and meet in the church auditorium for the communion service of Wednesday and Thursday and breakthrough night or service on Friday as The Lord leads the presiding Bishop of this commission - Bishop David Oyedepo. </p>
+
+    <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px; padding-left:30px;">The Week of Spiritual Emphasis is always an exciting time as there had been various testimonies of God's faithfulness from month to month. </p>
+
+    <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px; padding-left:30px;"><b>The {{x.m_y}}
+      {{x.year}} Edition of the Week of Spiritual Emphasis shall hold between Wednesday {{x.start}} and Friday {{x.end}}, hold from Wednesday,{{x.start}} – Friday, {{x.end}}, {{x.year}}</b> <br/>
+      {{x.remark_1}} “Week Of Spiritual Emphasis” {{x.remark_2}}.</p>
+    <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px; padding-left:30px;">This is another opportunity for the Winners family to start the new month with an encounter with God. With this understanding, every Winner is advised to take important every moment of the week as this will launch us into the realms of <b>Exploits</b> in this season of <b>enviable change of levels.</b> [Isaiah 43:19]</p>
+
+    <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px; padding-left:30px;">
+      Evening Communion services will hold on Wednesday, Thursday and Friday from 5:00pm to 7:00pm.<br/>
+      Be part of this Week of Spiritual Emphasis as we <b>lay a solid foundation for the year.</b>
+    </p>
+
+    <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px; padding-left:30px;">
+      We pray that God will give the strength to stay strong all through the week.<br/>
+      Join us to meet with Jesus for the week of Spiritual Emphasis and your life will NEVER remain the same in Jesus name. <br/>
+      <b style="font-family: Monotype Corsiva; font-size: 36.0pt;">Jesus is Lord!!!</b>
+    </p>
+
+       <hr />
+
+ </article>
+ {% endfor %}
+</div>
+
+
+<br clear="all">
+<br>
+
+		{% block abc %} {% include 'b/abc.html' %} {% endblock abc %}
+
+
+
+{% endblock content %}

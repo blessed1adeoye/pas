@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+{% block content %}
+<title>BELIEVERS FOUNDATION CLASS | Winners Chapel International - Total Garden | winnerschapeltg.org</title>
+<div class="row main-content"><!-- Main Content -->
+
+  <div class="large-12 columns">
+    <div class="row"><!-- Row -->
+
+      <div class="large-8 columns"> <br/>
+        <article class="post">
+          <div class="post_img">
+            <div class="orbit-container"><!-- Orbit Container -->
+              <img src="{% static 'img/bfc-banner.jpg' %}">
+            </div>
+            <!-- End Orbit Container -->
+          </div>
+          <h3 align="center" style="font-weight:bolder;">The Believers' Foundation Class!</h3>
+
+
+       <p align="justify" class="post_text" style="font-family:century gothic; font-size: 14px; padding: 0 40px;">The Believers’ Foundation & Membership Classes is a special forum put together to enhance the spiritual stability of all new converts and first time worshippers. In this class, all new converts, growing believers and those just taking a refresher-course get more light and understanding of the background from where this commission takes its roots.</b>
+    </p>
+  <p align="justify" class="post_text" style="font-family: gothic; font-size: 14px; padding: 0 40px;"> <b>In this class, students are made to understand:</b>
+       <ol class="post_text" style="font-family:century gothic; font-size: 14px; padding: 0 40px; color:#000;">
+         <li>The Spiritual Base of this Commission.</li>
+         <li>The Core Message of the Commission.</li>
+         <li>The Rights and privilege (benefits available); and</li>
+         <li>How to best raise yourself to contribute to the Mandate.</li>
+       </ol>
+  </p>
+       <p align="justify" class="post_text" style="font-family:century gothic; font-size: 14px; padding: 0 40px;">The are actually 3 Mandates that The Living Faith Church Worldwide carries
+       (FAITH; PROSPERITY; SIGNS &amp; WONDERS), each composed of 4 sections and forming 12 Pillars of the Commission. <br/>(<a href="{% url 'b:faith' %}">Click for The Commission's 12 Pillars of Faith</a>)
+       <p align="justify" class="post_text" style="font-family:century gothic; font-size: 14px; padding: 0 40px;">
+
+        </p>
+
+
+ <p align="justify" class="post_text" style="font-family: gothic; font-size: 14px; padding: 0 40px;">The Winning Foundation School is for all new converts, new members and existing members who have not gone through the school.
+<br/><br/>
+    Also, all who are yet to receive the baptism of the Holy Ghost with evidence of speaking in tongues are to come that day to meet with Jesus Christ – the Baptizer. <br/><br/>The kick-off time is usually 10am on a Saturday. <br/><strong>Please Call the Church office or Check the Notice Board for Schedules.</strong></p>
+ <h3 align="center">&nbsp;</h3>
+
+           <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+  </article>
+
+  <br/>
+
+
+      </div>
+
+       <br/>
+  <div class="large-4 columns">
+
+
+      					       {% block unit %} {% include 'b/unit.html' %} {% endblock unit %}
+      <br>
+      <img width="395" src="{% static 'img/125.png' %}"/>
+                  <br/>
+      <br/>
+      <div align="center">
+        <a target="_blank" href="{% url 'b:faith' %}">
+            CHECK OUR PILLAR OF FAITH HERE.
+        </a>
+      </div>
+
+
+
+  </div>
+ </div>
+
+</div>
+{% endblock content %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="row main-content">
+  <div class="large-12 columns">
+    <h3><b style="color:#fff">ALL CATEGORY</b></h3>
+    <div class="row">
+        {% for cat in cats %}
+        <div class="card mb-3 shadow">
+            <img src="/media/{{cat.category_image}}" alt="{{cat.title}}" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">{{cat.title}}</h5>
+                <p class="card-text"><a href="{% url 'b:category' cat.id %}" class="btn btn-success col-12">VIEW</a></p>
+            </div>
+        </div>
+       {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+{% endblock content %}

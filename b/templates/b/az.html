@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <title>CONTACT ME</title>
+    <link rel="stylesheet" href="{% static 'css/a.css' %}" type="text/css" media="all" />
+</head>
+<body>
+    <div class="contactus">
+        <div class="title" >
+            <h2>Get In Touch </h2>
+        </div>
+        <div class="box">
+            <!-- FORM -->
+            <div class="contact form">
+                <h3>Send a Message</h3>
+                <form>
+                    <div class="formBox">
+                        <div class="row50">
+                            <div class="inputBox">
+                                <span>First Name</span>
+                                <input type="text" placeholder="Blessed Adeoye">
+                            </div>
+                        </div>
+                                                <div class="row50">
+                            <div class="inputBox">
+                                <span>Last Name</span>
+                                <input type="text" placeholder=" Omobuwa">
+                            </div>
+                        </div>
+                                                <div class="row50">
+                            <div class="inputBox">
+                                <span>Email</span>
+                                <input type="text" placeholder="blessed1adeoye@gmail.com">
+                            </div>
+                        </div>
+                                                <div class="row50">
+                            <div class="inputBox">
+                                <span>Mobile</span>
+                                <input type="text" placeholder=" +234 813 2986 310">
+                            </div>
+                        </div>
+                        <div class="row100">
+                            <div class="inputBox">
+                                <span>Message</span>
+                                <textarea placeholder="Write your message Here!!!......!">
+                                </textarea>
+                            </div>
+                        </div>
+                         <div class="row100">
+                            <div class="inputBox">
+                                <input type="submit"  value="Send Message">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="contact info">
+                <h3>Contact Info</h3>
+                
+            </div>
+            <div class="contact map"></div>
+        </div>
+    </div>
+</body>
+    
+{% endblock content %}

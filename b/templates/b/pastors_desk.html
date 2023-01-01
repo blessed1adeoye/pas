@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+{% block content %}
+
+<div class="row main-content" style=" background: linear-gradient(90deg,#0e3959 0%,#0e3959 30%, #03a9f5 30%, #03a9f5 100%);">
+<!-- Main Content -->
+<div class="large-12 columns">
+ <div class="row">
+  <!-- Row -->
+  <div class="large-8 columns" > <br/>
+    <article class="post">
+
+    {% for x in desk %}
+      <h3 align="center" style="font-weight:bolder;"><b style="color:#006;">{{ x.topic }}<br/> {{ x.name }}</b> </h3>
+      <h3 align="center" style="font-weight:bolder;font-weight:bolder; color:#000; padding: 0 35px;">  <b style="color:#f00;">Week of {{ x.week }}</b></h3>
+      <br/>
+                <blockquote><span> <em style="color: #f00; font-family: times new roman;font-size: 14px; padding-left:30px;" class="fontsforweb_fontid_9785"> "{{ x.scripture }}. . ." <b>{{ x.scripture_reference }}</b>  </em>  </span> - <b>{{ x.bible_version }}</b></blockquote> <br/>
+        <br/>
+      <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px; padding-left:30px;">{{ x.message|safe }}
+      <!--  <strong>...and Let the Redeemed of the Lord say So!...</strong> <br />-->
+      </p>
+
+
+     </center>
+    {% endfor %}
+
+    </article>
+  </div>
+    <br/>
+  <div class="large-4 columns"  >
+    <div class="clearfix"></div>
+    <!-- End Panel --> 
+        <img src="{% static 'img/78.png' %}" alt="" width="100px" height="50">
+        <img src="{% static 'img/34.png' %}" alt="" width="150" height="50">
+        <img src="{% static 'img/78.png' %}" alt="" width="100" height="50">
+
+
+      <div>
+
+          {% for x in all_sms %}
+           <h2>MESSAGES</h2>
+
+              <h6><b>{{x.Theme}} - {{x.Theme_reference}}</b></h6>
+              <h3 style="color:gold;" class="icon-calendar" ><b>  {{x.d}}{{x.sup}} of {{x.m}} {{x.y}}</b></h3>
+              <h5>{{x.bible}}</h5>
+
+              <p align="justify">{{ x.message | slice:":200" |safe  }}</p>
+              <button><a href="{% url 'b:detail' x.id %}">READ MORE</a></button>
+
+          {% endfor %}
+
+      </div>
+
+    
+  </div>
+</div>
+
+
+ <br>
+
+<br clear="all">
+<br>
+  <!-- End Special Row --> 
+<meta name="viewport" content="width=device-width" />
+<title>Weekly Updates From the Pastor's Desk | Pastor Samuel Ajayi - Resident Pastor, Winners Chapel , Total Garden Ibadan | winnerschapeltotalgarden.org</title>
+    {% endblock content %}
+
+

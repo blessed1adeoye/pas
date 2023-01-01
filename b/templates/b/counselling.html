@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+<style>
+@font-face {
+	font-family: 'gothic';
+	src: url('../fonts/gothic.eot');
+	src: local('gothic'), url('../fonts/gothic.woff') format('woff'), url('../fonts/gothic.ttf') format('truetype');
+}
+/* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_9785">Text with this font applied</p> */
+.fontsforweb_fontid_9785 {
+	font-family: 'gothic' !important;
+}
+
+@font-face {
+  font-family: 'Didact Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: local('../fonts/Didact Gothic'), local('../fonts/DidactGothic'), url(http://themes.googleusercontent.com/static/fonts/didactgothic/v5/v8_72sD3DYMKyM0dn3LtWp_RtrTXGeaL_Dia6_H9gNs.woff) format('woff');
+}
+</style>
+<!-- Main Slider -->  
+<div align="center">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body style="background:#fff;">
+<!-- Caption Style -->
+<script type="text/javascript" src="{% static 'js/jssor.js' %}"></script>
+<title>COUNSELLING</title>
+
+<div class="row main-content" style="background:lightgreen;"><!-- Main Content -->
+  <div class="large-12 columns">
+   <div class="row band3"><!-- Row -->
+    
+    <div class="large-7 columns"> 
+        <script language="javascript" type="text/javascript" src="{% static 'js/validations.js' %}"></script>
+        <script language="javascript" type="text/javascript"></script>
+
+    
+                <h3> Counselling Form</h3>
+        <form method="POST" action="">
+            {% csrf_token %}
+          <fieldset>
+            <legend>Please Fill this Form to Request Counselling with Pastor Samuel</legend>
+            <div id="status"></div>
+            <div class="contact_form">
+              <div class="row">
+                <div class="small-4 columns">
+                  <input type="text"  placeholder="Your Full Name" name="full_name"/>
+                </div>
+                <div class="small-4 columns">
+                  <input type="text"  placeholder="Your Residential Address" name="residential"/>
+
+                </div>
+                <div class="small-4 columns">
+                  <input type="email" name="email"     placeholder="Your Email" />
+                  <br />
+                </div>
+                <div class="small-4 columns">
+                  <input type="text" name="phone"  placeholder="Phone No (999-999-9999)"  />
+                  <br />
+                </div>
+                 <div class="small-4 columns">
+                  <input type="text" name="church"  placeholder="Do you worship in this Assembly?" />
+
+                  <br /></div>
+
+                <div class="small-4 columns">
+                  <input type="text"  name="city" placeholder="Your City" />
+                  <br />
+                </div>
+                <div class="small-12 columns"><b style="color:#FFF;">Do you want Counselling by Phone?</b> <font style="color:#FFF; padding-left:5%;">
+                  <input name="call" type="checkbox" value="Yes"/>
+                  Yes  &nbsp;
+                  <input name="call" type="checkbox" value="No"/>
+                  No &nbsp;
+                </div>
+                  <br>
+                <br/>
+                <div class="small-12 columns"><b style="color:#FFF;">Reason For Requesting Counselling:</b> <font style="color:#FFF; padding-left:5%;">
+                  <input type="checkbox" name="status" value="Welfare"  />
+                 Welfare &nbsp; 
+                   <input type="checkbox" name="counsel" value="Education"/>
+                   Education &nbsp;
+                  <input type="checkbox" name="counsel" value="Employment"/>
+                      Employment <br/> <br/>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+                  <input type="checkbox" name="counsel" value="Family"/>
+                       Family  &nbsp;
+                  <input type="checkbox" name="counsel" value="Health/Sickness"/>
+                   Health/Sickness &nbsp;
+                   <input type="checkbox" name="counsel" value="Travel"/>
+                   Travel &nbsp;
+                   <input type="checkbox" name="counsel" value="Other"/>
+                   Other &nbsp;
+                </div>
+            
+                <div class="small-12 columns" style="padding-top:2%;">
+                  <textarea name="message" cols="7" rows="7"   placeholder="Please leave a VERY Brief Message for God's Servant"></textarea>
+
+                  <br />
+                </div>
+                <div class="small-12 columns">
+                  <input type="submit" class="button success radius medium"  />
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+   <div class="large-5 columns">
+        <h3 align="center">Meet Our Resident Pastor: <br/><b>Pastor Samuel Ajayi  </b></h3><p align="justify" class="fontsforweb_fontid_9785" style="font-size: 13px;">
+Pastor Ajayi is presently the Resident Pastor of Winners Chapel International Total Garden Ibadan. <!--He was ordained into full time ministry in August 2014. Prior to this, in 2008; he was privileged to be part of the core brothers tasked by leadership through Pastor David Adeoye with establishing the winners Chapel International fellowship Hampton, VA. <br/><br/>
+In September, 2011 he was ordained to be the Lead Minister of the Hampton, VA church. To the glory of God and in line with the Mandate of the Commission, the church in Hampton, VA is striving. Pastor Tunde was transferred to New Jersey in August 2014 to become the first full time Resident Pastor and he has served as Resident Pastor in Philadelphia and Minnesota.
+<br/><br/>-->
+Pastor Ajayi's main focus is teaching the core messages of the church which includes faith, signs and wonders, prosperity and the wonders of stewardship in the order of Matthew 6:33. He is joyfully married to Deaconess Ajayi and they are blessed with children.<br/>
+For counseling and prayers, please fill the form.
+
+
+
+
+      <!--div class="large-5 columns">
+        <h3 align="center">Meet Our Resident Pastor: <br/><b>Pastor Jide Owomoyela</b></h3><p align="justify" class="fontsforweb_fontid_9785" style="font-size: 13px;">Pastor Jide Owomoyela is currently the Resident Pastor of Winners Chapel International, Toronto Canada. An addicted lover of God, he is passionately committed to the core messages of the liberation mandate which is preaching the Word of Faith.
+          <br/>
+        His vision is to see the liberation mandate, given to his spiritual father, Bishop David Oyedepo, find full expression in the lives of people in Toronto and its environs.  The liberation mandate which is: </p>
+<blockquote style="color:#E0D108;"><i style="font-family:times new roman; font-size:18px;">"Now, the hour has come to liberate the world from all oppressions of the devil through the preaching of the word of faith, and I am sending you to undertake this task..."</i></blockquote><p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px;">is already in quick succession and is finding full expression throughout the length and breadth of the world including Canada.</p><p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px;">An embodiment of Grace and humility, Pastor Jide teaches the core values of practical Christian living centered on the 12 pillars of the Commission. Apart from focusing on the core message of the ministry, he is also gifted in motivating the people of God towards true & spirit-filled worship and also has a passion for seeing scriptures being fulfilled in the lives of people as evident in undeniable testimonies.
+He is joyfully married and has a blessed home. 
+For counseling and prayers, please fill the form.-->
+
+        
+          <b>Your long awaited turn-around and change of story is finally here!</b></p>
+        <div class="contact-details">
+         <!-- <p style="font-family:century gothic;"><span><i class="icon-home"></i></span>Church Location: UNIT 5, 321 REXDALE BLVD, TORONTO, ON M9W 1R8 </p>-->
+         <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px; padding-left:30px;"><span><i class="icon-phone"></i></span> 416-749-5191</p>
+         <!-- <p><span><i class="icon-print"></i></span>Fax: 800-xxx-0000</p>-->
+         <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px; padding-left:30px;"><span><i class="icon-envelope"></i></span> residentpastor@lfctotalgarden.org</p>
+        </div>
+        <br />
+        <!--<ul class="inline-list">
+          <li><a class="smallipopBlue" href="" title="Facebook"><i class="icon-facebook-sign icon-2x"></i></a></li>
+          <li><a class="smallipopBlue" href="" title="Twitter"><i class="icon-twitter-sign icon-2x"></i></a></li>
+          <li><a class="smallipopBlue" href="" title="Google+"><i class="icon-google-plus-sign icon-2x"></i></a></li>
+          <li><a class="smallipopBlue" href="" title="Linkedin"><i class="icon-linkedin-sign icon-2x"></i></a></li>
+          <li><a class="smallipopBlue" href="" title="Pinterest"><i class="icon-pinterest-sign icon-2x"></i></a></li>
+        </ul>-->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Main Content -->
+
+  </div>
+</div>
+  <!-- End Special Row --> 
+ {% endblock content %}

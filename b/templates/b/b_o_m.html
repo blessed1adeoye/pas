@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+
+
+<title>Recommended Books of the Month | Winners Chapel International - Total Garden | winnerschapeltg.org</title>
+
+
+
+<div class="row showcase">
+    <img src="{% static 'img/A3a.jpg' %}" />
+</div>
+
+<div class="large-12 columns">
+<div class="row bandblack">
+<div class="large-12 columns">
+ {% for x in record %}
+    <h1 align="center" style="font-size:36px; font-weight:bolder; color:#ffffff;">
+        Recommended Books for {{x.month}}, {{x.year}}
+    </h1>
+ {% endfor %}
+  <p align="justify"  class="fontsforweb_fontid_9785" style="font-size: 14px; padding: 0 40px;"> The Spirit of God said to God's servant - the Presiding Bishop of this Commission:</p>
+  <blockquote> <i style="font-family:'Times New Roman', Times; font-size:17px; color:#FF0;"> "The Word I have put in your mouth, the same commit to writing and I will cause the unction on the spoken word to rest upon the written word, producing the same effect."</i> </blockquote>
+  <p align="justify"  class="fontsforweb_fontid_9785" style="font-size: 14px; padding: 0 40px;"> Everyone is encouraged to visit the Bookstore to purchase the books of the month; we are all also admonished to read at least one of the books of the month, for every passing month<!--.<br/><br/> <b> Jesus is Lord!</b>--></p>
+</div>
+<div class="large-8 columns"><!--<h3 align="center"><strong>DECEMBER 2016:</strong> GODLINESS IS PROFITABLE UNTO ALL THINGS – 1 Timothy 4:8</h3>-->
+
+  <table class="fontsforweb_fontid_9785" style="padding:10px;">
+    <thead>
+      <tr>
+        <th width="200"></th>
+        <th width="703"></th>
+      </tr>
+    </thead>
+      {% for x in recommended %}
+    <tbody>
+      <tr>
+        <td><img style="box-shadow: 3px 3px 4px #000;" src="/media/{{x.book_img}}" alt="Understanding Financial Prosperity"/></td>
+        <td><h3 style="color:#e4545b;"><b>{{x.book_title}}</b> </h3>
+           {{x.book_body | safe}}
+
+          </td>
+      </tr>
+
+
+    </tbody>
+      {% endfor %}
+  </table>
+  <hr />
+</div>
+<br/>
+<div class="large-4 columns">
+  <div class="clearfix"></div>
+
+  <div>
+          </div>
+{% block unit %} {% include 'b/unit.html' %} {% endblock unit %}
+<!--      <img src="{% static 'img/banners/invitation.png' %}" alt="Invite a Friend" usemap="#Map5" border="0"/>-->
+<!--      <map name="Map5">-->
+<!--        <area shape="rect" coords="12,4,490,97" href="{% url 'b:invite' %}" target="_blank" alt="Invite a Friend to Church">-->
+<!--      </map>-->
+        <br/>
+
+      <br/>
+      <br/>
+<!--      <a href="https://s05.flagcounter.com/more/9Ot"><img src="https://s05.flagcounter.com/count2/9Ot/bg_FFFFFF/txt_000000/border_CCCCCC/columns_5/maxflags_26/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="website Counter for WCIT" border="0"></a><br/>-->
+    </div>
+    <!-- End Row -->
+
+  </div>
+</div>
+
+
+{% endblock content %}

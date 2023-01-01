@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+<div class="row main-content">
+  <!-- Main Content -->
+  <div class="large-12 columns">
+    <div class="row band3">
+      <!-- Row -->
+      <div class="large-7 columns">
+        <h3 align="center" style="color:#f9f7db;">Invite a Friend to Church Next Sunday</h3>
+        <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 15px; padding-left:30px;font-family:century gothic;">
+            When that new restaurant opened downtown, you probably had your friends tell you, <br/>
+            <b style="color:#FF0;"><i style="font-family:'Times New Roman', Times, serif; font-size:18px;">"...
+                you just have to try it, the meals are homemade,  fresh and delicious!".</i></b>
+            <br/>When that new movie premiered the other month, somebody may have told you, <br/>
+            <b style="color:#FF0;"><i style="font-family:'Times New Roman', Times, serif; font-size:18px;">
+                "Awesome! you've just got to see it, I was on the edge of my seat the whole time!"</i></b>
+        <br/><br/>
+        <b>God is undeniably at work at Winners Chapel International, Total Garden, Nigeria.</b>
+            <br/>You can respond to <strong>the heartbeat of God for the hour</strong>
+            by inviting all your friends, neighbors, colleagues and all your contacts
+            <b>to be a part of God's great move in our midst.</b>
+        <br/><br/>
+        <b style="color:#f9f193;">Fill the form below and send an invitation to a friend to worship with us this Sunday.</b>
+            <br/> You will be glad you sent this invitation.
+        </p>
+         <form method="POST" >
+             {% csrf_token %}
+          <fieldset>
+            <div class="contact_form">
+              <div class="row">
+                <div class="small-4 columns">
+                    <label style="color:gold;">FULLNAME</label>
+                  <input type="text" placeholder="Your Name" name="y_full_name" required/>
+                  <br />
+                </div>
+                <div class="small-4 columns">
+                    <label style="color:gold;">YOUR EMAIL</label>
+                  <input type="text" placeholder="Your E-mail" name="y_email" required/>
+                  <br />
+                </div>
+                <div class="small-4 columns">
+                    <label style="color:gold;">Next Sunday's Date</label>
+                  <input type="datetime-local" placeholder="Next Sunday's Date     &rarr;" id="id_next_sunday_date" name="next_sunday_date" />
+                  <br />
+                </div>
+                <div class="small-4 columns">
+                  <input type="text" placeholder="Your Friend's Name" name="y_friend_full_name" required/>
+                  <br />
+                </div>
+                <div class="small-4 columns">
+                  <input type="text" placeholder="Your Friend's E-mail" name="y_friend_email" required/>
+                  <br />
+                </div>
+                <div class="small-4 columns">
+                  <input type="text" placeholder="Next Sunday's Theme     &rarr;" name="theme" />
+                </div>
+                <div class="small-12 columns">
+                  <textarea cols="10" rows="10" name="message" placeholder="Your Message" required></textarea>
+                  <br />
+                </div>
+                <div class="small-12 columns">
+
+                  <input type="submit" class="button success radius medium" value="Send invitation"/>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+
+        {% for post in posts %}
+      <div class="large-5 columns">
+
+            <h5 align="center">Next Sunday -<b>{{post.sun_no}}<sup>{{post.sun_sup}}</sup> {{post.sun_alp}}, {{post.sun_year}}</b></h5>
+            <img src="/media/{{post.sun_img}}" alt="Next Sunday at WCIT"/>
+           <p align="center" class="fontsforweb_fontid_9785" style="font-size: 14px;">
+            <h4 align="center"><b style="color:#FF0;">Next Sunday's Theme:</b></h4>
+            <h5 align="center">  <b>{{post.theme}}</b></h5> </p>
+                  <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px; padding-left:30px;font-family:century gothic;">
+            <b style="color:#f9f193;"> When you submit the form, your friend will receive an email from Us. All the relevant information you need to fill this form are  right here on this page.</b> </p>
+       {% endfor %}
+        <div class="contact-details">
+          <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px;">
+            <span><i class="icon-home"></i></span>KM 9, QUEEN ELIZABETH ROAD, <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TOTAL GARDEN, OYO STATE
+              <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  NIGERIA.</p>
+          <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px;">
+          <span><i class="icon-phone"></i></span> <strong>(647) 548-7063 </strong></span> <br/>
+          <span><i class="icon-envelope"></i></span> lfctotalgarden@gmail.com <br/>
+          <span><i class="icon-tasks"></i></span><b>Covenant Hour of Prayers:</b> 6:00am - 7:00pm </span> </p>
+        </div>
+        <br />
+        <ul class="inline-list" style="padding-left:30px;">
+          <li><a class="smallipopBlue" href="https://www.facebook.com/" title="Facebook"><i class="icon-facebook-sign icon-2x"></i></a></li>
+          <li><a class="smallipopBlue" href="https://twitter.com/" title="Twitter"><i class="icon-twitter-sign icon-2x"></i></a></li>
+          <li><a class="smallipopBlue" href="#" title="Google+"><i class="icon-google-plus-sign icon-2x"></i></a></li>
+          <li><a class="smallipopBlue" href="#" title="Linkedin"><i class="icon-linkedin-sign icon-2x"></i></a></li>
+          <li><a class="smallipopBlue" href="#" title="Pinterest"><i class="icon-pinterest-sign icon-2x"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Main Content -->
+</div>
+</div>
+<title>INVITE MY FRIEND</title>
+
+{% endblock content %}

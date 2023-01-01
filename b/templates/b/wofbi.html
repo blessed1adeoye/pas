@@ -1,0 +1,280 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+{% block content %}
+<title>WOFBI | Winners Chapel International - Total Garden | winnerschapeltg.org</title>
+
+<!--<div align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px; background-color:#fff;" >-->
+<div class="row main-content">
+  <div class="large-12 columns">
+    <div class="row">
+    {% for x in wofbi %}
+      <div class="large-8 columns"> <br/>
+        <article class="post">
+          <div class="post_img">
+            <div class="orbit-container"><!-- Orbit Container -->
+             <img src="/media/{{x.img}}">
+            </div>
+            <!-- End Orbit Container -->
+          </div>
+          <h3 align="center" style="font-weight:bolder;">THE WORD OF FAITH BIBLE INSTITUTE [WOFBI]</h3>
+          <h3 align="center" style="padding-top:0px; font-weight:bolder;"> (THE TRAINING MANDATE)</h3>
+
+
+
+          <h3 style="font-weight:bolder;">GOOD NEWS!!!</h3>
+
+        <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px; ">We want to invite you to join an army of men and women, young and old, who are ready to let their lives count for eternity - people who want to be used of God by the power of His Spirit to make an eternal impact on their generation. </p>
+
+        <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px;">At WOFBI, you will be make yourself part of the new breed of revivalists.  You will be armed with the Word of God, ignited by the Fire of God, and ultimately launched into the destiny that God has for your life!</p>
+         <h3 style="font-weight:bolder;">Impact of WOFBI:</h3>
+
+         <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px;">At WOFBI, we do not offer mere secular education; we also provide deep spiritual enlightenment, as well as mental empowerment for exploits. WOFBI is not just a place of learning; it is actually a mountain of transformation.
+                In the words of Dr. David Oyedepo, "There is no mountain anywhere; every man's ignorance is his mountain". It is your light that defines your limit, if you will submit to the forces of enlightenment; you will subdue every mountainous issues of your life.
+            - The school is non-residential<br/>
+            - The School does not run correspondence programme.<br/>
+            - The BCC Course is a pre-requisite for one to attend the LCC and then the LDC courses<br/>
+            - You must show proof of satisfactory level of literacy with ability to communicate in English language.<br/>
+            - Classes run throughout the year, so take advantage of this great opportunity.</p>
+                      <hr />
+
+        'lcc_title',
+        'lcc_st_dt',
+        'lcc_st_sup',
+        'lcc_sp_dt',
+        'lcc_sp_sup',
+        'lcc_orient',
+        'lcc_orient_sup',
+        'lcc_orient_remark',
+        'lcc_resume',
+        'lcc_resume_sup',
+        'lcc_resume_remark',
+        'lcc_graduate',
+        'lcc_graduate_sup',
+        'lcc_graduate_remark',
+        'ldc_title',
+        'ldc_st_dt',
+        'ldc_st_sup',
+        'ldc_sp_dt',
+        'ldc_sp_sup',
+        'ldc_orient',
+        'ldc_orient_sup',
+        'ldc_orient_remark',
+        'ldc_resume',
+        'ldc_resume_sup',
+        'ldc_resume_remark',
+        'ldc_graduate',
+        'ldc_graduate_sup',
+        'ldc_graduate_remark'
+            <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px;">WOFBI, Total Garden Ibadan Campus - All WOFBI tiers in 2018 will take the 2-week evening and weekend format.<br/><b>The schedule for 2018 school year are as follows: </b><br/>
+            <h3>JUNIOR BIBLE SCHOOL (JBS)</h3>
+            <li class="fontsforweb_fontid_9785" style="font-size: 14px; color:#F00; ">
+                <b> {{x.jbs_title}} </b> - ( {{x.jbs_st_dt}}<sup>{{x.jbs_st_sup}}</sup> - {{x.jbs_sp_dt}}<sup>{{x.jbs_sp_sup}}</sup>)</li>
+            <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px; ">
+                 <b>Orientation Date:</b>________{{x.jbs_orient}}<sup>{{x.jbs_orient_sup}}</sup> {{x.jbs_orient_remark}}<br/>
+                 <b>Resumption Date:</b>________{{x.jbs_resume}}<sup>{{x.jbs_resume_sup}}</sup> {{x.jbs_resume_remark}}<br/>
+                 <b>Graduation Date:</b>________{{x.jbs_graduate}}<sup>{{x.jbs_graduate_sup}}</sup> {{x.jbs_graduate_remark}}<br/></p>
+
+              <h3>BASIC CERTIFICATE COURSE (BCC)</h3>
+                 <li class="fontsforweb_fontid_9785" style="font-size: 14px; color:#F00;">
+                     <b>{{x.bcc_title}}</b> - ( {{x.bcc_st_dt}}<sup>{{x.bcc_st_sup}}</sup> –  {{x.bcc_sp_dt}}<sup>{{x.bcc_sp_sup}} </sup> )
+                 </li>
+            <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px; ">
+                <b>Orientation Date:</b>_______ {{x.bcc_orient}} <sup>{{x.bcc_orient_sup}}</sup> {{x.bcc_orient_remark}}<br/>
+                 <b>Resumption Date:</b>________ {{x.bcc_resume}} <sup>{{x.bcc_resume_sup}}</sup> {{x.bcc_resume_remark}}<br/>
+                 <b>Graduation Date:</b>________ {{x.bcc_graduate}} <sup>{{x.bcc_graduate_sup}}</sup> {{x.bcc_graduate_remark}}<br/>
+
+
+
+                 <h3>LEADERSHIP CERTIFICATE COURSE (LCC)</h3>
+            <li class="fontsforweb_fontid_9785" style="font-size: 14px; color:#F00;">
+               <b>{{x.lcc_title}}</b> - ( {{x.lcc_st_dt}}<sup>{{x.lcc_st_sup}}</sup> –  {{x.lcc_sp_dt}}<sup>{{x.lcc_sp_sup}}</sup> )
+             </li>
+            <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px; ">
+                <b>Orientation Date:</b>_______ {{x.lcc_orient}} <sup>{{x.lcc_orient_sup}}</sup> {{x.lcc_orient_remark}}<br/>
+                 <b>Resumption Date:</b>________ {{x.lcc_resume}} <sup>{{x.lcc_resume_sup}}</sup> {{x.lcc_resume_remark}}<br/>
+                 <b>Graduation Date:</b>________ {{x.lcc_graduate}} <sup>{{x.lcc_graduate_sup}}</sup> {{x.lcc_graduate_remark}}<br/>
+
+                   <h3>LEADERSHIP DIPLOMA COURSE (LDC)</h3>
+            <!--<li class="fontsforweb_fontid_9785" style="font-size: 14px; color:#F00;"><b>To be Determined </b> </li> -->
+            <li class="fontsforweb_fontid_9785" style="font-size: 14px; color:#F00; ">
+                {{x.ldc_title}}</b> - ( {{x.ldc_st_dt}}<sup>{{x.ldc_st_sup}}</sup> –  {{x.ldc_sp_dt}}<sup>{{x.ldc_sp_sup}}</sup> )
+            </li>
+            <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px; ">
+                <b>Orientation Date:</b>_______ {{x.ldc_orient}} <sup>{{x.ldc_orient_sup}}</sup> {{x.ldc_orient_remark}}<br/>
+                 <b>Resumption Date:</b>________ {{x.ldc_resume}} <sup>{{x.ldc_resume_sup}}</sup> {{x.ldc_resume_remark}}<br/>
+                 <b>Graduation Date:</b>________ {{x.ldc_graduate}} <sup>{{x.ldc_graduate_sup}}</sup> {{x.ldc_graduate_remark}}<br/>
+
+                 </p>
+
+                    <p class="post_text" style="font-family:century gothic; font-size:15px;"><b>Further Details and Admission Forms are available at the Church Office.  Phone: (416) 749 5191</b></p>
+                    <font style="font-family: Monotype Corsiva; font-size: 36.0pt; color:#000; padding-left:40px;">Jesus is Lord!</font></b></p>
+                   </article>
+                   </div>
+
+            <div class="large-4 columns" style="font-family:century gothic; "> <br/>
+              <div class=" panel black" style="padding:10px 15px;">
+                <!-- Panel -->
+                <div class="large-12 columns" style="padding:0px;"><br/>
+                  <div><b style="color:#fff; font-size:18px;"><i class="icon-briefcase"></i>Basic Certificate Courses (BCC)</b></div>
+                  <br/>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+<!--               End Panel -->
+              <div class="panel" style="padding:10px 15px;">
+                <!-- Panel -->
+                <div class="large-12 columns" style="padding:0px; "> </div>
+                <div class="clearfix"></div>
+                <div>
+                  <p align="justify" class="fontsforweb_fontid_9785" style="color:#000; font-size:13px; "><i class="icon-lightbulb"></i>Word Foundation (WFN) - Jn.1:1</p>
+                </div>
+                <div>
+                  <p align="justify" class="fontsforweb_fontid_9785" style="color:#000; font-size:13px;"><i class="icon-lightbulb"></i>New Creation Fundamentals (NCF) - 2Cor.5:17</p>
+                </div>
+                <div>
+                  <p align="justify" class="fontsforweb_fontid_9785" style="color:#000; font-size:13px;"><i class="icon-lightbulb"></i>Character Development (CDM)- Rom 8:19</p>
+                </div>
+                <div>
+                  <p align="justify" class="fontsforweb_fontid_9785" style="color:#000; font-size:13px;"><i class="icon-lightbulb"></i>Principles of Answered Prayer(PAP) - Lk 11:1</p>
+                </div>
+                <div>
+                  <p align="justify" class="fontsforweb_fontid_9785" style="color:#000; font-size:13px;"><i class="icon-lightbulb"></i>Principles of Faith (POF) - Heb.11:6</p>
+                </div>
+                <div>
+                  <p align="justify" class="fontsforweb_fontid_9785" style="color:#000; font-size:13px;"><i class="icon-lightbulb"></i>Principles of Success (POS) - Joshua 1:8</p>
+                </div>
+                <div>
+                  <p align="justify" class="fontsforweb_fontid_9785" style="color:#000; font-size:13px;"><i class="icon-lightbulb"></i>Determining Divine Direction (DDD) - Isaiah 30:21</p>
+                </div>
+                <div>
+                  <p align="justify" class="fontsforweb_fontid_9785" style="color:#000; font-size:13px;"><i class="icon-lightbulb"></i>Principles of Financial Prosperity (PFP)- Deut.8:18 </p>
+                </div>
+                <div>
+                  <p align="justify" class="fontsforweb_fontid_9785" style="color:#000; font-size:13px;"><i class="icon-lightbulb"></i>Principles of Ministry (POM)-Col 4:17</p>
+                </div>
+                <div>
+                  <p align="justify" class="fontsforweb_fontid_9785" style="color:#000; font-size:13px;"><i class="icon-lightbulb"></i>Family Life (FML) - Gen. 1:28</p>
+                </div>
+                </p>
+                <div>
+                  <p align="justify" class="fontsforweb_fontid_9785" style="color:#000; font-size:13px;"><i class="icon-lightbulb"></i>Principles of Divine Health (PDH)- Is. 58:8</p>
+                </div>
+                <div>
+                  <p align="justify" class="fontsforweb_fontid_9785" style="color:#000; font-size:13px;"><i class="icon-lightbulb"></i>The Holy Spirit (THS) - John 16:13</p>
+                </div>
+              </div>
+              <!-- End Panel -->
+              <div class="panel callout radius" style="padding:10px 15px;">
+                <!-- Panel -->
+                <div class="large-12 columns" style="padding:0px;"><br/>
+                  <div><b style="color:#fff; font-size:18px;"><i class="icon-briefcase"></i>Leadership Certificate Course (LCC)</b></div>
+                  <br/>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <!-- End Panel -->
+              <div class="panel" style="padding:10px 15px;">
+                <!-- Panel -->
+                <div class="large-12 columns" style="padding:0px; "> </div>
+                <div class="clearfix"></div>
+                <div>
+                  <p align="justify" class="fontsforweb_fontid_9785" style="color:#000; font-size:13px;"><i class="icon-lightbulb"></i>Biblical Business Srtrategy(BBS) - Ecl.10:15</p>
+                </div>
+                <div>
+                  <p align="justify" class="fontsforweb_fontid_9785" style="color:#000; font-size:13px;"><i class="icon-lightbulb"></i>Understanding the Power of Praise(UPP) - Heb.13:15</p>
+                </div>
+                <div>
+                  <p align="justify" class="fontsforweb_fontid_9785" style="color:#000; font-size:13px;"><i class="icon-lightbulb"></i>Excellence in Ministry(EIM) - Phil. 3:14</p>
+                </div>
+                <div>
+                  <p align="justify" class="fontsforweb_fontid_9785" style="color:#000; font-size:13px;"><i class="icon-lightbulb"></i>Principles of Church Growth(PCG) - Matt. 16: 18</p>
+                </div>
+                <div>
+                  <p align="justify" class="fontsforweb_fontid_9785" style="color:#000; font-size:13px;"><i class="icon-lightbulb"></i>Understanding the Anointing(UTA) - Is. 10:27</p>
+                </div>
+                <div>
+                  <p align="justify" class="fontsforweb_fontid_9785" style="color:#000; font-size:13px;"><i class="icon-lightbulb"></i>Principles of Supernatural Supplies(PSS) - Phil. 4:19</p>
+                </div>
+                <div>
+                  <p align="justify" class="fontsforweb_fontid_9785" style="color:#000; font-size:13px;"><i class="icon-lightbulb"></i>Dynamics of Signs and Wonders(DSW) - Is. 8:18</p>
+                </div>
+                <div>
+                  <p align="justify" class="fontsforweb_fontid_9785" style="color:#000; font-size:13px;"><i class="icon-lightbulb"></i>Dynamics of Holiness(DOH) - 2 Cor. 7:1</p>
+                </div>
+                <div>
+                  <p align="justify" class="fontsforweb_fontid_9785" style="color:#000; font-size:13px;"><i class="icon-lightbulb"></i>Vision Analysis(VAN) - Hab. 2:3</p>
+                </div>
+                <div>
+                  <p align="justify" class="fontsforweb_fontid_9785" style="color:#000; font-size:13px;"><i class="icon-lightbulb"></i>Marriage Covenant(MCN) - Psa. 89:34</p>
+                </div>
+                <div>
+                  <p align="justify" class="fontsforweb_fontid_9785" style="color:#000; font-size:13px;"><i class="icon-lightbulb"></i>Faith Complex(FCX) - Mat. 17: 20</p>
+                </div>
+                <div>
+                  <p align="justify" class="fontsforweb_fontid_9785" style="color:#000; font-size:13px;"><i class="icon-lightbulb"></i>Success Concept(SCT) - Isaiah 48:17</p>
+                </div>
+
+              </div>
+              <!-- End Panel -->
+                 <div class=" panel black" style="padding:10px 15px;">
+                <!-- Panel -->
+                <div class="large-12 columns" style="padding:0px;"><br/>
+                  <div><b style="color:#fff; font-size:18px;"><i class="icon-briefcase"></i>Leadership Diploma Course (LDC) </b></div>
+                  <br/>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <!-- End Panel -->
+              <div class="panel" style="padding:10px 15px;">
+                <!-- Panel -->
+                 <div class="large-12 columns" style="padding:0px; "> </div>
+                <div class="clearfix"></div>
+                <div>
+                  <p align="justify" class="fontsforweb_fontid_9785" style="color:#000; font-size:13px;"><i class="icon-lightbulb"></i>Biblical Management Principles (BMP) - Pro. 24:27</p>
+                </div>
+                <div>
+                  <p align="justify" class="fontsforweb_fontid_9785" style="color:#000; font-size:13px;"><i class="icon-lightbulb"></i>Exploits in Ministry (EXM) - 1 Thessalonians 5:24</p>
+                </div>
+                <div>
+                  <p align="justify" class="fontsforweb_fontid_9785" style="color:#000; font-size:13px;"><i class="icon-lightbulb"></i>Principles of Integrity (PIN) - Proverbs 11:3</p>
+                </div>
+                <div>
+                  <p align="justify" class="fontsforweb_fontid_9785" style="color:#000; font-size:13px;"><i class="icon-lightbulb"></i>Growing in Power (GIP) - Acts 1:8</p>
+                </div>
+                <div>
+                  <p align="justify" class="fontsforweb_fontid_9785" style="color:#000; font-size:13px;"><i class="icon-lightbulb"></i>Word Dynamics (WDY) Hebrews - 4:12</p>
+                </div>
+                <div>
+                  <p align="justify" class="fontsforweb_fontid_9785" style="color:#000; font-size:13px;"><i class="icon-lightbulb"></i>Ministry and Family (MAF) - 1 Timothy 3:5</p>
+                </div>
+                <div>
+                  <p align="justify" class="fontsforweb_fontid_9785" style="color:#000; font-size:13px;"><i class="icon-lightbulb"></i>Financing the Ministry (FTM) - Luke 22:35</p>
+                </div>
+                <div>
+                  <p align="justify" class="fontsforweb_fontid_9785" style="color:#000; font-size:13px;"><i class="icon-lightbulb"></i>Supernatural Wisdom (SPW) - James 1:5</p>
+                </div>
+                <div>
+                  <p align="justify" class="fontsforweb_fontid_9785" style="color:#000; font-size:13px;"><i class="icon-lightbulb"></i>Exploits of Faith (EOF) - 1 John 5:4</p>
+                </div>
+                <div>
+                  <p align="justify" class="fontsforweb_fontid_9785" style="color:#000; font-size:13px;"><i class="icon-lightbulb"></i>Signs and Wonders Today (SWT) - Acts 5:12</p>
+                </div>
+                </p>
+                <div>
+                  <p align="justify" class="fontsforweb_fontid_9785" style="color:#000; font-size:13px;"><i class="icon-lightbulb"></i>Plan Purpose and Pursuit (PPP) - Jeremiah 1:5</p>
+                </div>
+                <div>
+                  <p align="justify" class="fontsforweb_fontid_9785" style="color:#000; font-size:13px;"><i class="icon-lightbulb"></i>Spiritual Leadership (SPL) - Mathew 20:25-27</p>
+                </div>
+              </div>
+        {% endfor %}
+              <!-- End Panel -->
+              <div class="panel callout radius" style="padding:10px 15px;">
+            </div>
+    </div>
+<!-- End Main Content -->
+</div>
+
+{% endblock content %}

@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<title>TECHNICAL | STUDIO  Winners Chapel, Total Garden, Ibadan | winnerschapeltotalgarden.org</title>
+
+
+<div class="row showcase"> <img src="{% static 'img/4.jpg' %}" alt="THIS IS TECHNICAL IMAGE"/> </div>
+<div class="row main-content"><!-- Main Content -->
+
+  <div class="large-12 columns">
+    <div class="row band3"><!-- Row -->
+
+      <div class="large-7 columns">
+
+                <h3 align="center">Technical Unit Membership Application Form </h3>
+        <form method="POST" action="">
+          {% csrf_token %}
+          <fieldset>
+            <legend>Kingdom Service Application Form!</legend>
+            <div id="status"></div>
+            <div class="contact_form">
+              <div class="row">
+                <div class="small-4 columns">
+                  <label style="color:gold">NAME</label>
+                  <input type="text" size="30" class="frm_txt_fld"   placeholder="Your Full Name" name="full_name"/>
+                  <br />
+                </div>
+                <div class="small-4 columns">
+                  <label style="color:gold">ADDRESS</label>
+                  <input type="text" size="30" class="frm_txt_fld"  required placeholder="Your Residential Address" name="residence"/>
+                  <br />
+                </div>
+                <div class="small-4 columns">
+                  <label style="color:gold">EMAIL</label>
+                  <input type="text" size="30" class="frm_txt_fld"  placeholder="Your Email" required name="email"/>
+                  <br />
+                </div>
+                <div class="small-4 columns">
+                  <label style="color:gold">TELEPHONE</label>
+                  <input type="text" size="15" class="frm_txt_fld" placeholder="Phone No (999 999 9999)" required name="phone"/>
+                  <br />
+                </div>
+                <div class="small-4 columns">
+                  <label style="color:gold">CITY</label>
+                  <input name="city" type="text" class="frm_txt_fld" required placeholder="Your City" size="30"/>
+                  <br />
+                </div>
+                <div class="small-4 columns">
+                  <label style="color:gold">ARE YOU BORN AGAIN</label>
+                   <input type="radio"  name="born_again" value="Yes"/>
+                  Yes  &nbsp;
+                  <input type="radio" name="born_again" value="No"/>
+                  No &nbsp;
+                  <br /><br /><br /><br />
+                  <br />
+                </div>
+                <div class="small-4 columns">
+                  <label style="color:gold">DATE YOU JOINED THIS CHURCH</label>
+                  <input name="joined_date" type="date" class="frm_txt_fld" value="" placeholder="Date I joined this Church" required size="30"/>
+                  <br />
+                </div>
+                <div class="small-4 columns">
+                  <label style="color:gold">DATE OF NEW BIRTH</label>
+                  <input name="new_birth_date" type="date" class="frm_txt_fld" value="" placeholder="Date of New Birth"  size="30"/>
+                  <br />
+                </div>
+                <div class="small-4 columns">
+                  <label style="color:gold">OCCUPATION</label>
+                  <input name="occupation" type="text" class="frm_txt_fld" value="" placeholder="What is Your Occupation/Position?" required size="30"/>
+                  <br />
+                </div>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <div align="justify" class="small-12 columns" ><b style="color:#FFF;">Have you Attended Foundation Class?</b> <font style="color:#FFF; padding-left:5%;">
+                  <input type="radio" name="foundation_class" value="Yes"  />
+                  Yes  &nbsp;
+                  <input type="radio" name="foundation_class" value="No" />
+                  No &nbsp;
+                 <br/>
+                  </font>
+                </div>
+                <div align="justify" class="small-12 columns" ><b style="color:#FFF;">What is your Job Schedule?</b> <font style="color:#FFF; padding-left:5%;">
+                  <input type="radio" name="job" value="Day" />
+                  Day  &nbsp;
+                  <input type="radio" name="job" value="Night"/>
+                  Night &nbsp;
+                  <input type="radio" name="job" value="Shift" />
+                  Shift &nbsp;
+                  <input type="radio" name="job" value="Sunday" />
+                      Sundays Inclusive &nbsp;
+                  <br/></font>
+                </div>
+
+                <div align="justify" class="small-12 columns"><b style="color:#FFF;">What is your Marital Status?</b> <font style="color:#FFF; padding-left:5%;">
+                  <input type="radio" name="status" value="Married"  />
+                  Married  &nbsp;
+                  <input type="radio" name="status" value="Single"/>
+                  Single &nbsp;
+                  <input type="radio" name="status" value="Widowed"/>
+                  Widowed &nbsp;
+                  <input type="radio" name="status" value="Separated"/>
+                  Separated &nbsp;
+                  <input type="radio" name="status" value="Divorced"/>
+                  Divorced &nbsp;
+                  <br/></font>
+                </div>
+
+                <div class="small-12 columns" style="padding-top:5%;">
+                  <textarea cols="7" rows="7"  placeholder="Why I want to join the Media Crew of this Assembly?" name="message" required></textarea>
+                  <br />
+                </div>
+                <div class="small-12 columns">
+                  <input type="submit" class="button success radius medium" value="Send message" name="send" id="send" />
+                  <p  class="fontsforweb_fontid_9785" style="font-size: 15px;">By pressing the <b style="color:red;">Send message Button</b>,
+                    you are signing a digital signature, indicating that you are willing to engage yourself in voluntary kingdom service
+                    in Winners Chapel International, Total Garden Ibadan, Nigeria, and all Information given are true and verifiable. </p>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      <div class="large-5 columns">
+        <h3 align="center">The Technical Unit</h3>
+        <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 13px;">This department is responsible for the maintenance of technical equipment and media coverage of the church.</p>
+        <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 13px;">It is the responsibility of members of this Service group to maintain and set musical instruments and microphones for all our services.<br/>
+          They also record messages of every service.<br/>
+          They are in charge of the day-to-day up-date of the church website</p>
+  <h3 align="center">Media and Production</h3>
+        <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 13px;">The media team in Winners Chapel Total Garden Ibadan is made up of skilled and trained media personnel who are responsible for our graphics, T.V outreach programs, film
+          editing and all forms of electronic and print media. </p>
+        <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 13px;"> </p>
+        <div class="contact-details" style="padding-left:12%;">
+          <p align="justify" class="fontsforweb_fontid_9785"><span><i class="icon-home"></i></span>Address: KM9, Queen Elizabeth Way, Total Garden, Ibadan, Nigeria </p>
+          <p align="justify" class="fontsforweb_fontid_9785"><span><i class="icon-phone"></i></span>Phone: (234) 813-123-4567</p>
+          <p align="justify" class="fontsforweb_fontid_9785"><span><i class="icon-envelope"></i></span>E-mail: lfctechnical@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,50 @@
+{% load static %}
+
+<script>
+
+		$(document).ready(function(){
+		 document.oncontextmenu = function() {return false;};
+		$(document).mousedown(function(e){
+			if( e.button == 2 ) {
+			 		  alert('Winners Chapel Total Garden.org - COPYING DISABLED - All rights are reserved.');
+
+			  return false;
+			}
+			return true;
+		  });
+		});
+
+  </script>
+
+
+<link rel="stylesheet" href="{% static 'font/css/all.css' %}">
+<link rel="stylesheet" href="{% static 'ade.css' %} ">
+
+<ade>
+    <!--header area start here-->
+    <head>
+        <div class="left_area">
+            <h3>church <span>admin</span></h3>
+        </div>
+        <div class="right_area">
+            <a href="#" class="logout_btn"> Log Out</a>
+        </div>
+    </head>
+    <!--header area ends here-->
+
+    <!--sidebar start-->
+    <div class="sidebar">
+        <center>
+            <img src="{% static 'img/13.png' %}" class="profile_img" >
+            <h4>Name</h4>
+        </center>
+
+        <a href=""><i class="icon-box icon-desktop icon"></i><span>Dashboard</span></a>
+        <a href=""><i class="icon-box icon-cogs icon"></i><span>Components</span></a>
+        <a href=""><i class="icon-box icon-table icon"></i><span>Tables</span></a>
+        <a href=""><i class="icon-box icon-th icon"></i><span>Forms</span></a>
+        <a href=""><i class="fas fa-info-circle "></i><span>About</span></a>
+        <a href=""><i class="fas fa-sliders-h "></i><span>Settings</span></a>
+    </div>
+    <!--sidebar ends-->
+

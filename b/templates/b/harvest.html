@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+{% block content %}
+
+<div class="row showcase"> <img src="{% static 'img/86.png' %}" /> </div>
+<div class="row main-content"><!-- Main Content -->
+
+  <div class="large-12 columns">
+    <div class="row band3"><!-- Row -->
+
+      <div class="large-7 columns">
+          <script language="javascript" type="text/javascript" src="{% static 'js/validations.js' %}"></script>
+
+            <h3 align="center">Harvesters' Squad Membership Form   </h3>
+          <form method="POST" action="">
+              {% csrf_token %}
+              <fieldset>
+                <legend>Kingdom Service Application Form!</legend>
+                <div id="status"></div>
+                <div class="contact_form">
+                  <div class="row">
+                    <div class="small-4 columns">
+                      <label style="color:gold">NAME</label>
+                      <input type="text" size="30" class="frm_txt_fld"   placeholder="Your Full Name" name="full_name"/>
+                      <br />
+                    </div>
+                    <div class="small-4 columns">
+                      <label style="color:gold">ADDRESS</label>
+                      <input type="text" size="30" class="frm_txt_fld"  required placeholder="Your Residential Address" name="residence"/>
+                      <br />
+                    </div>
+                    <div class="small-4 columns">
+                      <label style="color:gold">EMAIL</label>
+                      <input type="text" size="30" class="frm_txt_fld"  placeholder="Your Email" required name="email"/>
+                      <br />
+                    </div>
+                    <div class="small-4 columns">
+                      <label style="color:gold">TELEPHONE</label>
+                      <input type="text" size="15" class="frm_txt_fld" placeholder="Phone No (999 999 9999)" required name="phone"/>
+                      <br />
+                    </div>
+                    <div class="small-4 columns">
+                      <label style="color:gold">CITY</label>
+                      <input name="city" type="text" class="frm_txt_fld" required placeholder="Your City" size="30"/>
+                      <br />
+                    </div>
+                    <div class="small-4 columns">
+                      <label style="color:gold">ARE YOU BORN AGAIN</label>
+                       <input type="radio"  name="born_again" value="Yes"/>
+                      Yes  &nbsp;
+                      <input type="radio" name="born_again" value="No"/>
+                      No &nbsp;
+                      <br /><br /><br /><br />
+                      <br />
+                    </div>
+                    <div class="small-4 columns">
+                      <label style="color:gold">DATE YOU JOINED THIS CHURCH</label>
+                      <input name="joined_date" type="date" class="frm_txt_fld" value="" placeholder="Date I joined this Church" required size="30"/>
+                      <br />
+                    </div>
+                    <div class="small-4 columns">
+                      <label style="color:gold">DATE OF NEW BIRTH</label>
+                      <input name="new_birth_date" type="date" class="frm_txt_fld" value="" placeholder="Date of New Birth"  size="30"/>
+                      <br />
+                    </div>
+                    <div class="small-4 columns">
+                      <label style="color:gold">OCCUPATION</label>
+                      <input name="occupation" type="text" class="frm_txt_fld" value="" placeholder="What is Your Occupation/Position?" required size="30"/>
+                      <br />
+                    </div>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <div align="justify" class="small-12 columns" ><b style="color:#FFF;">Have you Attended Foundation Class?</b> <font style="color:#FFF; padding-left:5%;">
+                      <input type="radio" name="foundation_class" value="Yes"  />
+                      Yes  &nbsp;
+                      <input type="radio" name="foundation_class" value="No" />
+                      No &nbsp;
+                     <br/>
+                      </font>
+                    </div>
+
+                    <div align="justify" class="small-12 columns" ><b style="color:#FFF;">What is your Job Schedule?</b> <font style="color:#FFF; padding-left:5%;">
+                      <input type="radio" name="job" value="Day" />
+                      Day  &nbsp;
+                      <input type="radio" name="job" value="Night"/>
+                      Night &nbsp;
+                      <input type="radio" name="job" value="Shift" />
+                      Shift &nbsp;
+                      <input type="radio" name="job" value="Sunday" />
+                          Sundays Inclusive &nbsp;
+                      <br/></font>
+                    </div>
+
+                    <div align="justify" class="small-12 columns"><b style="color:#FFF;">What is your Marital Status?</b> <font style="color:#FFF; padding-left:5%;">
+                      <input type="radio" name="status" value="Married"  />
+                      Married  &nbsp;
+                      <input type="radio" name="status" value="Single"/>
+                      Single &nbsp;
+                      <input type="radio" name="status" value="Widowed"/>
+                      Widowed &nbsp;
+                      <input type="radio" name="status" value="Separated"/>
+                      Separated &nbsp;
+                      <input type="radio" name="status" value="Divorced"/>
+                      Divorced &nbsp;
+                      <br/></font>
+                    </div>
+
+                    <div class="small-12 columns" style="padding-top:5%;">
+                      <textarea cols="7" rows="7"  placeholder="Why I want to join the Evangelism and Follow Up team of this Assembly?" name="message" required></textarea>
+                      <br />
+                    </div>
+                    <div class="small-12 columns">
+                      <input type="submit" class="button success radius medium" value="Send message" name="send" id="send" />
+                      <p  class="fontsforweb_fontid_9785" style="font-size: 15px;">By pressing the <b style="color:red;">Send message Button</b>,
+                        you are signing a digital signature, indicating that you are willing to engage yourself in voluntary kingdom service
+                        in Winners Chapel International, Total Garden Ibadan, Nigeria, and all Information given are true and verifiable. </p>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+          </form>
+      </div>
+
+
+
+      <div class="large-5 columns">
+        <h3 align="center">The Church Evangelism Team</h3>
+            <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 13px;">
+                <i style="font-family:times new roman; font-size:16px; color:#E9EF0D;">Go ye therefore , into all the world and make disciples of all nations.." Matthew 28:19</i>
+
+                <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 13px;"> The evangelism unit exists to carry out the comprehensive vision listed below and of which you can become involved. In essence, every believer is a member of this Service Unit. Members of this unit:<br/>
+           - Preaching and teaching the word of God with the utilization of tracts to win souls in the community.<br/>
+           - Visit hospitals to pray for the sick and minister salvation to them.<br/>
+           - Meet two Saturdays in a month to pray for Members, Converts, Outreaches and the Church.<br/>
+           - Organize occasional Mass Evangelism for the Church.<br/>
+            - Organize Occasional workshops on personal Evangelism and discipleship.<br/>
+            - Follow-up on souls won in the street outreaches.
+              </p>
+
+            <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 13px;"> The great commission mandate is versatile and cannot be fully enumerated, however the vision enfolds as the spirit of God commands and leads us in the unit.</p>
+             <h3>The Follow-up Team</h3>
+              <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 13px;"> The follow-up team assists the first timers by:<br/>
+            - Giving information about the Church and our meetings, and helping them know that they are appreciated and most welcome.<br/>
+            - Keeping the "back door" firmly shut – making sure that those who have decided to join the Winners family don’t slip out through the back door through lack of information<br/>
+            - They agree with our First Timers in prayers on burning issues of their lives.<br/>
+            -  They counsel, and if need be, recommend for further counseling with the Pastor.<br/>
+            - They recommend other activities such as The Winners Foundation Class and Word of Faith Bible Institute (WOFBI) to further strengthen their faith.</p>
+
+             {% block id %} {% include 'b/id.html' %} {% endblock  %}
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock content %}

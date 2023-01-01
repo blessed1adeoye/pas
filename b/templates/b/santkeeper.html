@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+{% block content %}
+
+<!--<div class="row showcase"> <img src="{% static 'img/banners/sk.jpg' %}"/> </div>-->
+<div class="row showcase"><img src="{% static 'img/sks.png' %}"/></div>
+<div class="row main-content"><!-- Main Content -->
+
+  <div class="large-12 columns">
+    <div class="row band3"><!-- Row -->
+      <div class="large-7 columns">
+        <script language="javascript" type="text/javascript" src="{% static 'js/validations.js' %}"></script>
+
+                <h3 align="center">SANCTUARY Unit Membership Application Form  </h3>
+        <form method="POST" action="">
+          {% csrf_token %}
+          <fieldset>
+            <legend>Kingdom Service Application Form!</legend>
+            <div id="status"></div>
+            <div class="contact_form">
+              <div class="row">
+                <div class="small-4 columns">
+                  <label style="color:gold">NAME</label>
+                  <input type="text" size="30" class="frm_txt_fld"   placeholder="Your Full Name" name="full_name"/>
+                  <br />
+                </div>
+                <div class="small-4 columns">
+                  <label style="color:gold">ADDRESS</label>
+                  <input type="text" size="30" class="frm_txt_fld"  required placeholder="Your Residential Address" name="residence"/>
+                  <br />
+                </div>
+                <div class="small-4 columns">
+                  <label style="color:gold">EMAIL</label>
+                  <input type="text" size="30" class="frm_txt_fld"  placeholder="Your Email" required name="email"/>
+                  <br />
+                </div>
+                <div class="small-4 columns">
+                  <label style="color:gold">TELEPHONE</label>
+                  <input type="text" size="15" class="frm_txt_fld" placeholder="Phone No (999 999 9999)" required name="phone"/>
+                  <br />
+                </div>
+                <div class="small-4 columns">
+                  <label style="color:gold">CITY</label>
+                  <input name="city" type="text" class="frm_txt_fld" required placeholder="Your City" size="30"/>
+                  <br />
+                </div>
+                <div class="small-4 columns">
+                  <label style="color:gold">ARE YOU BORN AGAIN</label>
+                   <input type="radio"  name="born_again" value="Yes"/>
+                  Yes  &nbsp;
+                  <input type="radio" name="born_again" value="No"/>
+                  No &nbsp;
+                  <br /><br /><br /><br />
+                  <br />
+                </div>
+                <div class="small-4 columns">
+                  <label style="color:gold">DATE YOU JOINED THIS CHURCH</label>
+                  <input name="joined_date" type="date" class="frm_txt_fld" value="" placeholder="Date I joined this Church" required size="30"/>
+                  <br />
+                </div>
+                <div class="small-4 columns">
+                  <label style="color:gold">DATE OF NEW BIRTH</label>
+                  <input name="new_birth_date" type="date" class="frm_txt_fld" value="" placeholder="Date of New Birth"  size="30"/>
+                  <br />
+                </div>
+                <div class="small-4 columns">
+                  <label style="color:gold">OCCUPATION</label>
+                  <input name="occupation" type="text" class="frm_txt_fld" value="" placeholder="What is Your Occupation/Position?" required size="30"/>
+                  <br />
+                </div>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <div align="justify" class="small-12 columns" ><b style="color:#FFF;">Have you Attended Foundation Class?</b> <font style="color:#FFF; padding-left:5%;">
+                  <input type="radio" name="foundation_class" value="Yes"  />
+                  Yes  &nbsp;
+                  <input type="radio" name="foundation_class" value="No" />
+                  No &nbsp;
+                 <br/>
+                  </font>
+                </div>
+
+                <div align="justify" class="small-12 columns" ><b style="color:#FFF;">What is your Job Schedule?</b> <font style="color:#FFF; padding-left:5%;">
+                  <input type="radio" name="job" value="Day" />
+                  Day  &nbsp;
+                  <input type="radio" name="job" value="Night"/>
+                  Night &nbsp;
+                  <input type="radio" name="job" value="Shift" />
+                  Shift &nbsp;
+                  <input type="radio" name="job" value="Sunday" />
+                      Sundays Inclusive &nbsp;
+                  <br/></font>
+                </div>
+
+                <div align="justify" class="small-12 columns"><b style="color:#FFF;">What is your Marital Status?</b> <font style="color:#FFF; padding-left:5%;">
+                  <input type="radio" name="status" value="Married"  />
+                  Married  &nbsp;
+                  <input type="radio" name="status" value="Single"/>
+                  Single &nbsp;
+                  <input type="radio" name="status" value="Widowed"/>
+                  Widowed &nbsp;
+                  <input type="radio" name="status" value="Separated"/>
+                  Separated &nbsp;
+                  <input type="radio" name="status" value="Divorced"/>
+                  Divorced &nbsp;
+                  <br/></font>
+                </div>
+
+                <div class="small-12 columns" style="padding-top:5%;">
+                  <textarea cols="7" rows="7"  placeholder="Why I want to join The Sanctuary Unit of this Assembly?" name="message" required></textarea>
+                  <br />
+                </div>
+                <div class="small-12 columns">
+                  <input type="submit" class="button success radius medium" value="Send message" name="send" id="send" />
+                  <p  class="fontsforweb_fontid_9785" style="font-size: 15px;">By pressing the <b style="color:red;">Send message Button</b>,
+                    you are signing a digital signature, indicating that you are willing to engage yourself in voluntary kingdom service
+                    in Winners Chapel International, Total Garden Ibadan, Nigeria, and all Information given are true and verifiable. </p>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      <div class="large-5 columns">
+        <h3 align="center">The Sanctuary Keepers </h3>
+        <b><p align="justify" class="fontsforweb_fontid_9785" style="font-size: 13px;">Have you ever wondered why the church is usually
+          so Pristine and Clean? It is so because we have committed men and women, devoted to making sure that the house of God is clean
+          and tidy to ensure His welcoming presence in our services.</p>
+        <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 13px;">Members of this Unique service group have the following
+          responsibilities:<br/>
+
+          - Maintaining a well organised and orderly use of the Sanctuary before, during and after Services. <br/>
+          - Ensuring that the Church convenience rooms are kept clean, presentable, and necessary facilities are available at all times.<br/>
+          - Providing adequate directions regarding conveniences and other sanitary facilities within the church premises.<br/>
+          - Arranging the sanctuary and other areas to meet the needs of our various types of services.<br/>
+          - Carrying out proper waste management within the church premises.<br/>
+          - Ensuring that adequate air conditioning and heating is maintained in liaison with the  technical team</p>
+        <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 13px;"> Members of this department are the divine hands
+          of righteousness. You can become part of this team by filling the online form or getting a hard copy of the application
+          form from the Church office.
+        </p></b>
+          {% block id %} {% include 'b/id.html' %}  {% endblock  %}
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>
+
+<meta name="viewport" content="width=device-width" />
+<title>| SANTUARY KEEPERS Winners Chapel International, Total Garden Ibadan | winnerschapeltotalgarden.org</title>
+
+
+{% endblock content %}

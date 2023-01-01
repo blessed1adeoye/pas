@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<title>The PRAYER MINISTRY |  Formidable Prayer Force  | The Word of Faith | Winners Chapel, Total Garden, Ibadan | winnerschapeltotalgarden.org</title>
+
+<div class="row main-content"><!-- Main Content -->
+
+    	<div class="large-12 columns">
+
+			<div class="row"><!-- Row -->
+
+                <div class="large-8 columns">
+                     <br/>
+                    <article class="post">
+
+                        <div class="post_img">
+                            <div class="orbit-container"><!-- Orbit Container -->
+
+                                        <img src="{% static 'img/prayer-force-banner.jpg' %}">
+
+                            </div><!-- End Orbit Container -->
+                        </div>
+                        <h2 style="color:#000000;"><strong>The Prayer Force</strong></h2>
+                        <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px;">
+                        <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px;">
+                        The prayer team forms a formidable force within the Church. They are responsible for the continuous spiritual strengthening
+                        of the church's backbone through effective fervent prayer sessions consistently held
+                        everyday from 8:00am-9:30pm; and from 11:00pm to 2:00am on the third Friday of every month. The objectives of the prayer team are:
+                        To intercede for Winners Chapel International Worldwide<br/>
+                        To intercede for the leadership of Winners Chapel International Worldwide<br/>
+                        To intercede for the unsaved to come to the kingdom of God<br/>
+                        To intercede for the leadership of the nation<br/>
+                        To intercede for Gods guidance and direction for the Church and Nation
+
+                        </p>
+                    <!--
+                    <h3>Objective of this Department:</h3-->
+                    <p align="justify" class="fontsforweb_fontid_9785" style="font-size: 14px;">
+                        At the Prayer Force. we have many opportunities for you to join  our Team.  Whether you like to pray in a group,
+                        or pray in your own home, there ia a place for you.
+                    </p>
+
+
+                        <hr />
+
+                    </article>
+
+                </div>
+
+
+                    <br/>
+                <div class="large-4 columns">
+
+
+
+                            <div class="clearfix"></div>
+                    {% block unit %} {% include 'b/unit.html' %} {% endblock unit %}<br>
+                    <hr>
+                    {% for x in pf %}
+                        <img width="395" src="/media/{{x.img}}"/>
+                          <br/> <br/> <a target="_blank" href="/media/{{x.document}}">
+                                        Click here to Download {{x.title}}
+                    <hr>
+                    <br>
+                                </a>
+                    {% endfor %}
+                </div>
+            </div>
+    	</div>
+</div>
+
+{% endblock content %}
